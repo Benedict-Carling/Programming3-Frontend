@@ -67,9 +67,13 @@ export default function NavBar() {
                   />
                 </IconButton>
               </Link>
-              <Typography variant="h6" className={classes.title}>
-                React2 - Resolve discrepancies
-              </Typography>
+              <Link style={navStyle} to="/Data">
+                <Button>
+                  <Typography className={classes.navbartext}>
+                    Resolve Issues
+                  </Typography>
+                </Button>
+              </Link>
               <Typography variant="h6" className={classes.title}>
                 Account Type: {userData.user.type}
               </Typography>
