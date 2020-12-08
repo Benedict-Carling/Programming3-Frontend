@@ -2,17 +2,16 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
+<<<<<<< HEAD
 import "./Login.css";
 import covidStats from "./covidStats.png";
 import ContainedButtons from "./ContainedButtons.js";
+=======
+>>>>>>> 14eebb7fad5400021f8514024d02277d3096e900
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
 
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
@@ -28,7 +27,7 @@ export default function Login() {
       token: loginRes.data.token,
       user: loginRes.data.user,
     });
-    history.push("/");
+    history.push("/home");
   };
 
   return (
