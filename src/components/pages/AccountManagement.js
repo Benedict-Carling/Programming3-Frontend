@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 
 import Register from "../AccountManagement/Register";
+import DeleteUsers from "../AccountManagement/DeleteUsers";
 
 export default function AccountManagement(props) {
   return (
@@ -20,7 +21,9 @@ export default function AccountManagement(props) {
         </Card>
       </Grid>
       <Grid item xs={12} sm={6}>
-        Hello
+        <Card type="outlined">
+          <DeleteUsers />
+        </Card>
       </Grid>
     </Grid>
   );
