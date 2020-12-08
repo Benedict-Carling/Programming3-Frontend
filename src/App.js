@@ -4,8 +4,10 @@ import UserContext from "./context/UserContext";
 import AccountManagement from "./components/pages/AccountManagement";
 import NavBar from "./components/layout/NavBar";
 import Home from "./components/pages/home";
+import Data from "./components/pages/Data";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+
 
 import "./style.css";
 
@@ -24,11 +26,15 @@ export default function App() {
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/register" component={Register} />
+
             <Route
               exact
               path="/accountmanagement"
               component={AccountManagement}
             />
+
+            <Route exact path="/data" component={Data} />
+
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
