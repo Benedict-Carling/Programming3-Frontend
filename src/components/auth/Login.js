@@ -4,7 +4,7 @@ import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import "./Login.css";
 import covidStats from "./covidStats.png";
-import ContainedButtons from "./ContainedButtons.js";
+import Button from "@material-ui/core/Button";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -49,8 +49,14 @@ export default function Login() {
           id="login-password"
           type="password"
         />
-
-        <ContainedButtons disabled={!validateForm()} />
+        <Button
+          onClick={submit}
+          variant="contained"
+          color="secondary"
+          type="submit"
+        >
+          Login
+        </Button>
       </form>
     </div>
   );
