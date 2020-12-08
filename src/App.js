@@ -6,6 +6,8 @@ import NavBar from "./components/layout/NavBar";
 import Home from "./components/pages/home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import GetTable from "./components/Table/getTable";
+
 
 import "./style.css";
 
@@ -23,6 +25,7 @@ export default function App() {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
+            <Route exact path="/home" component={GetTable} />
             <Route exact path="/register" component={Register} />
             <Route
               exact
