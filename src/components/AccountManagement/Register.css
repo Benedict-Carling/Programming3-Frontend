@@ -1,0 +1,84 @@
+
+
+
+.Register {
+
+    background-color: #8CBDB9;
+    text-align: left;
+
+}
+
+.Register form{
+    margin-left: 50px ;
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 90vmin;
+        text-align: left;
+        padding-top: 10px;
+        
+}
+
+.Register-MainTitle{
+    background-color: #8CBDB9;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        font-size: calc(2px + 2vmin);
+        color: #2D3E4E;
+        font: 'oxygen';
+        margin-left: 50px;
+        max-width: 500px;
+}
+.Register-email{
+    margin-left: 50px ;
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 10vmin;
+        text-align: left;
+        padding-top: 10px;
+        color: #2D3E4E;
+        font-size: calc(1px + 1vmin);
+       
+}
+
+.Register-password{
+    margin-left: 50px ;
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 10vmin;
+        text-align: left;
+        padding-top: 10px;
+        color: #2D3E4E;
+        font-size: calc(1px + 1vmin);
+    
+}
+
+.Register-passwordCheck{
+    margin-left: 50px ;
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 10vmin;
+        text-align: left;
+        padding-top: 10px;
+        color: #2D3E4E;
+        font-size: calc(1px + 1vmin);
+    
+}
+.Register-userType{
+    margin-left: 0px ;
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 10vmin;
+        text-align: left;
+        padding-top: 10px;
+        color: #2D3E4E;
+        font-size: calc(1px + 1vmin);
+    
+}
+
+.Register-Alert{
+    font-size: calc(1px + 1vmin);
+}
+
