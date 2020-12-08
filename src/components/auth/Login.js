@@ -2,12 +2,9 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
-<<<<<<< HEAD
 import "./Login.css";
 import covidStats from "./covidStats.png";
 import ContainedButtons from "./ContainedButtons.js";
-=======
->>>>>>> 14eebb7fad5400021f8514024d02277d3096e900
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -31,32 +28,30 @@ export default function Login() {
   };
 
   return (
-    <div className = "Login">
-    <header className="Login-MainTitle">
-      <h1 className="Login-title">Welcome to REACT 2</h1>
-    </header>
-    <img src={covidStats} className="Login-picture" alt="covidStats"/>
+    <div className="Login">
+      <header className="Login-MainTitle">
+        <h1 className="Login-title">Welcome to REACT 2</h1>
+      </header>
+      <img src={covidStats} className="Login-picture" alt="covidStats" />
       <header className="Login-header">
-          <h1 className="Login-title">Log in</h1>
-      </header> 
+        <h1 className="Login-title">Log in</h1>
+      </header>
       <form onSubmit={submit}>
-        
-          <label htmlFor="login-email">Email</label>
-            <input
-              onChange={(e) => setEmail(e.target.value)}
-              id="login-email"
-              type="email"
-            />
-          <label htmlFor="login-password">password</label>
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              id="login-password"
-              type="password"
-            /> 
-            
-            <ContainedButtons disabled={!validateForm()} />  
-            
-          </form>
+        <label htmlFor="login-email">Email</label>
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          id="login-email"
+          type="email"
+        />
+        <label htmlFor="login-password">password</label>
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          id="login-password"
+          type="password"
+        />
+
+        <ContainedButtons disabled={!validateForm()} />
+      </form>
     </div>
   );
 }
