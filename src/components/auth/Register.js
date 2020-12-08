@@ -23,7 +23,7 @@ export default function Register() {
       token: loginRes.data.token,
       user: loginRes.data.user,
     });
-    history.push("/");
+    history.push("/home");
   };
 
   return (

@@ -5,6 +5,7 @@ import Axios from "axios";
 import "./Login.css";
 import covidStats from "./covidStats.png";
 import Button from "@material-ui/core/Button";
+import ForgotPassword from "./ForgotPassword"
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -27,6 +28,16 @@ export default function Login() {
     history.push("/home");
   };
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="Login">
       <header className="Login-MainTitle">
@@ -43,7 +54,7 @@ export default function Login() {
           id="login-email"
           type="email"
         />
-        <label htmlFor="login-password">password</label>
+        <label htmlFor="login-password">Password</label>
         <input
           onChange={(e) => setPassword(e.target.value)}
           id="login-password"
@@ -57,7 +68,20 @@ export default function Login() {
         >
           Login
         </Button>
+        <Button
+          onClick={handleClickOpen}
+          variant="contained"
+          color="primary"
+          type="submit"
+          size="large"
+        >
+          Forgot your password
+        </Button>
       </form>
+      <ForgotPassword
+      open = {open}
+      handleClose = {handleClose}
+      />
     </div>
   );
 }
