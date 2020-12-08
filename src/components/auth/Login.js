@@ -2,6 +2,9 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
+import "./Login.css";
+import covidStats from "./covidStats.png";
+import Button from "@material-ui/core/Button";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -25,8 +28,14 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+    <div className="Login">
+      <header className="Login-MainTitle">
+        <h1 className="Login-title">Welcome to REACT 2</h1>
+      </header>
+      <img src={covidStats} className="Login-picture" alt="covidStats" />
+      <header className="Login-header">
+        <h1 className="Login-title">Log in</h1>
+      </header>
       <form onSubmit={submit}>
         <label htmlFor="login-email">Email</label>
         <input
@@ -40,7 +49,14 @@ export default function Login() {
           id="login-password"
           type="password"
         />
-        <input type="submit" value="register" />
+        <Button
+          onClick={submit}
+          variant="contained"
+          color="secondary"
+          type="submit"
+        >
+          Login
+        </Button>
       </form>
     </div>
   );

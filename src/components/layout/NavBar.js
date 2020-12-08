@@ -48,9 +48,53 @@ export default function NavBar() {
     history.push("/");
   };
 
-  return (
-    <>
-      {userData.user ? (
+  try {
+    if (userData.user.type === "webmaster")
+      return (
+        <div className={classes.root}>
+          <AppBar position="static" color="transparent">
+            <Toolbar>
+              <Link to="/">
+                <IconButton
+                  edge="start"
+                  className={classes.menuButton}
+                  aria-label="menu"
+                >
+                  <img
+                    src={process.env.PUBLIC_URL + "icl.png"}
+                    height="50"
+                    alt="logo"
+                  />
+                </IconButton>
+              </Link>
+              <Typography variant="h6" className={classes.title}>
+                React2 - Resolve discrepancies
+              </Typography>
+              <Typography variant="h6" className={classes.title}>
+                Account Type: {userData.user.type}
+              </Typography>
+              <Link style={navStyle} to="/">
+                <Button>
+                  <Typography className={classes.navbartext}>Home</Typography>
+                </Button>
+              </Link>
+              <Link style={navStyle} to="/accountmanagement">
+                <Button>
+                  <Typography className={classes.navbartext}>
+                    Account Management
+                  </Typography>
+                </Button>
+              </Link>
+              <Button onClick={logout}>
+                <Typography className={classes.navbartext}>Logout</Typography>
+              </Button>
+            </Toolbar>
+          </AppBar>
+        </div>
+      );
+
+    if (userData.user.type)
+      return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
             <Toolbar>
@@ -84,9 +128,8 @@ export default function NavBar() {
             </Toolbar>
           </AppBar>
         </div>
-      ) : (
-        <></>
-      )}
-    </>
-  );
+      );
+  } catch {
+    return <></>;
+  }
 }
