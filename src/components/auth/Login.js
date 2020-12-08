@@ -2,12 +2,9 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
-<<<<<<< HEAD
 import "./Login.css";
 import covidStats from "./covidStats.png";
-import ContainedButtons from "./ContainedButtons.js";
-=======
->>>>>>> 14eebb7fad5400021f8514024d02277d3096e900
+import Button from '@material-ui/core/Button';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -53,9 +50,9 @@ export default function Login() {
               id="login-password"
               type="password"
             /> 
-            
-            <ContainedButtons disabled={!validateForm()} />  
-            
+             <Button onClick={submit} variant="contained" color="secondary" type= "submit">
+              Login
+            </Button> 
           </form>
     </div>
   );
