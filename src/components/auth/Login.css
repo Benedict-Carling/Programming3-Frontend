@@ -1,6 +1,5 @@
-@media all and (min-width: 480px) {
 
-    
+
     .Login {
       
       background-color: #8CBDB9;
@@ -10,18 +9,19 @@
     }
   
     .Login form {
-      margin-left: 50px ;
-      max-width: 50px;
-      background-color: #8CBDB9;
-      height: 30vmin;
-      
-       
-    }
+        margin-left: 50px ;
+        max-width: 50px;
+        background-color: #8CBDB9;
+        height: 30vmin;
+        text-align: left;
+        
+         
+      }
    
-  }
+  
    .Login-header {
         background-color: #8CBDB9;
-        min-height: 4vh;
+
         display: flex;
         flex-direction: column;
         align-items: left;
@@ -33,7 +33,7 @@
         max-width: 500px;
       }
     .Login-picture{
-      height: 30vmin;
+      height: 45vmin;
       position: absolute;
       right: 0%;
       background-color: #8CBDB9;

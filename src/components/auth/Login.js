@@ -4,8 +4,7 @@ import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import "./Login.css";
 import covidStats from "./covidStats.png";
-import Form from "react-bootstrap/Form";
-import Button from 'react-bootstrap/Button';
+import ContainedButtons from "./ContainedButtons.js";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -41,27 +40,24 @@ export default function Login() {
       <header className="Login-header">
           <h1 className="Login-title">Log in</h1>
       </header> 
-      <Form onSubmit={submit}>
-        <Form.Group size="lg" controlId="email"></Form.Group>
-          <Form.Label htmlFor="login-email">Email</Form.Label>
-            <Form.Control
+      <form onSubmit={submit}>
+        
+          <label htmlFor="login-email">Email</label>
+            <input
               onChange={(e) => setEmail(e.target.value)}
               id="login-email"
               type="email"
             />
-        <Form.Group>
-        <Form.Group size="lg" controlId="email"></Form.Group>
-          <Form.Label htmlFor="login-password">password</Form.Label>
-            <Form.Control
+          <label htmlFor="login-password">password</label>
+            <input
               onChange={(e) => setPassword(e.target.value)}
               id="login-password"
               type="password"
-            />
-          </Form.Group>  
-        <Button block size="lg" value="register" type="submit" disabled={!validateForm()}>
-          login
-        </Button>
-      </Form>
+            /> 
+            
+            <ContainedButtons disabled={!validateForm()} />  
+            
+          </form>
     </div>
   );
 }
