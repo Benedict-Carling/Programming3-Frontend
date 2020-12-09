@@ -2,16 +2,17 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
 
+
 export default function GetTable() {
     
 const columns = [
-    { field: "id", headerName: "ID", width: 200 },
-    { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 200 },
-    { field: "Flag", headerName: "Flag", width: 200 },
+    { field: "id", headerName: "ID", width: 50 },
+    { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 150 },
+    { field: "Flag", headerName: "Flag", width: 150 },
     { field: "UserInterpretation", headername:"User Interpretation",width: 200},
     { field: "AlgorithmInterpretation", headername:"Algorithm Interpretation",width:200},
     { field: "ExpertInterpretation", headername:"Expert Interpretation", width:200},
-    { field: " ExpertComment", headername:" Expert Comment", width:200},
+    { field: "ExpertComment", headername:" Expert Comment", width:200},
     { field: "ImagePath", headername:"Image Path", width: 200}
     
   ];
@@ -33,18 +34,15 @@ const columns = [
         const fetchData = async () => {
             const result= await Axios.get(`http://localhost:5000/data/table`)
             var body = result.data.map(process)
-            console.log(body)
             settable(body);
         }
         fetchData();
         
     }, []);
-    var ent = table[2];
-    console.log('table',ent)
 
     return (
-        <div style={{ height: 400, width: "100%" }}>
-          <DataGrid rows={table} columns={columns} pageSize={5} checkboxSelection />
+        <div style={{ height: 440, width: "100%" }}>
+          <DataGrid rows={table} columns={columns} pageSize={6} checkboxSelection />
         </div>
       );
 

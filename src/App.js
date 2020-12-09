@@ -10,7 +10,6 @@ import Register from "./components/auth/Register";
 import GetTable from "./components/Table/getTable";
 
 
-
 import "./style.css";
 
 export default function App() {
