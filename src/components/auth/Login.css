@@ -21,7 +21,6 @@
   
    .Login-header {
         background-color: #8CBDB9;
-
         display: flex;
         flex-direction: column;
         align-items: left;
@@ -47,7 +46,24 @@
         flex-direction: row;
         align-items: left;
         justify-content: left;
+        font: 'oxygen';
         font-size: calc(20px + 5vmin);
         color: #2D3E4E;
         margin-left: 50px;
       }
+
+    .Label{
+      color: #2D3E4E;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+     .Textfield{
+       background-color: #E8ECEB;
+       border: none;
+       padding: 5px 5px;
+       color: #2D3E4E;
+       border-radius: 5px;
+       margin-top: 5%;
+       margin-bottom: 5%;
+     } 

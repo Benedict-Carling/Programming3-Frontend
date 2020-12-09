@@ -5,7 +5,7 @@ import Axios from "axios";
 import "./Login.css";
 import covidStats from "./covidStats.png";
 import Button from "@material-ui/core/Button";
-import ForgotPassword from "./ForgotPassword"
+import ForgotPassword from "./ForgotPassword";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -48,19 +48,19 @@ export default function Login() {
         <h1 className="Login-title">Log in</h1>
       </header>
       <form onSubmit={submit}>
-        <label htmlFor="login-email">Email</label>
-        <input
+        <label className="Label" htmlFor="login-email">Email</label>
+        <input className="Textfield"
           onChange={(e) => setEmail(e.target.value)}
           id="login-email"
           type="email"
         />
-        <label htmlFor="login-password">Password</label>
-        <input
+        <label className="Label" htmlFor="login-password">Password</label>
+        <input className="Textfield"
           onChange={(e) => setPassword(e.target.value)}
           id="login-password"
           type="password"
         />
-        <Button
+        <Button 
           onClick={submit}
           variant="contained"
           color="secondary"
@@ -68,12 +68,14 @@ export default function Login() {
         >
           Login
         </Button>
-        <Button
+        <Button 
           onClick={handleClickOpen}
-          variant="contained"
-          color="primary"
+          style={{
+            fontSize: 10
+          }}
+          variant="text"
+          color="#2D3E4E"
           type="submit"
-          size="large"
         >
           Forgot your password
         </Button>
