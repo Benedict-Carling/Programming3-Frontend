@@ -70,7 +70,10 @@ export default function SimpleTabs(props) {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <GetTable setSelectedID={props.setSelectedID} />
+        <GetTable
+          setSelectedID={props.setSelectedID}
+          buttonclicked={props.buttonclicked}
+        />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <MainTable />

@@ -2,9 +2,11 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 export default function EditTable(props) {
   function committodatabase() {
+    props.setButtonclicked(false);
     console.log(props.selectedID);
     console.log(props.expertComment);
     console.log(props.expertInterpretation);
@@ -21,11 +23,26 @@ export default function EditTable(props) {
       "http://localhost:5000/data/add-comment",
       jsonobj
     );
+    if (res.status === 200) props.setButtonclicked(true);
     console.log("response", res);
   };
 
+  function getimgpath() {
+    if (props.selectedID > 17) return "17";
+    else return props.selectedID;
+  }
+
   return (
     <div>
+      <TransformWrapper>
+        <TransformComponent>
+          <img
+            src={process.env.PUBLIC_URL + "collection/" + getimgpath() + ".jpg"}
+            height="300"
+            alt="logo"
+          />
+        </TransformComponent>
+      </TransformWrapper>
       <TextField
         id="idofclicked"
         label="ID"

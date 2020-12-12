@@ -13,6 +13,7 @@ export default function Data() {
   const [selectedID, setSelectedID] = useState("");
   const [expertComment, setExpertComment] = useState("");
   const [expertInterpretation, setExpertInterpretation] = useState("");
+  const [buttonclicked, setButtonclicked] = useState(false);
   return (
     <Grid
       container
@@ -24,7 +25,10 @@ export default function Data() {
     >
       <Grid item xs={12} sm={9}>
         <Card type="outlined">
-          <SimpleTabs setSelectedID={setSelectedID} />
+          <SimpleTabs
+            setSelectedID={setSelectedID}
+            buttonclicked={buttonclicked}
+          />
         </Card>
       </Grid>
       <Grid item xs={12} sm={3}>
@@ -35,6 +39,7 @@ export default function Data() {
           expertComment={expertComment}
           expertInterpretation={expertInterpretation}
           setExpertInterpretation={setExpertInterpretation}
+          setButtonclicked={setButtonclicked}
         />
       </Grid>
     </Grid>
