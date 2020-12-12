@@ -1,69 +1,45 @@
 
+ .Login {
+    background-color: #043c74;
+  }
 
-    .Login {
-      
-      background-color: #8CBDB9;
-      text-align: left;
-      
-     
-    }
-  
-    .Login form {
-        margin-left: 50px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 30vmin;
-        text-align: left;
-        
-         
-      }
-   
-  
-   .Login-header {
-        background-color: #8CBDB9;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: left;
-        font-size: calc(2px + 2vmin);
-        color: #2D3E4E;
-        font: 'oxygen';
-        margin-left: 50px;
-        max-width: 500px;
-      }
-    .Login-picture{
-      height: 45vmin;
-      position: absolute;
-      right: 0%;
-      background-color: #8CBDB9;
-      
-    }
-    .Login-MainTitle {
-        max-width: 600px;
-        background-color: #8CBDB9;
-        min-height: 25vh;
-        display: flex;
-        flex-direction: row;
-        align-items: left;
-        justify-content: left;
-        font: 'oxygen';
-        font-size: calc(20px + 5vmin);
-        color: #2D3E4E;
-        margin-left: 50px;
-      }
+  .Login form {
+    margin-left: 50px ;
+    max-width: 100px;
+    height: 30vmin;
+    text-align: left;     
+  }
 
-    .Label{
-      color: #2D3E4E;
-      padding-top: 5%;
-      padding-bottom: 5%;
-    }
+  .Login-picture{
+    height: auto;
+    position: absolute;
+    right: 1%;
+  }
+  .MainTitle {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    font: 'oxygen';
+    font-size: calc(20px + 5vmin);
+    color:  #E8ECEB;
+    margin-left: 50px;
+  }
 
-     .Textfield{
-       background-color: #E8ECEB;
-       border: none;
-       padding: 5px 5px;
-       color: #2D3E4E;
-       border-radius: 5px;
-       margin-top: 5%;
-       margin-bottom: 5%;
-     } 
+  .Label{
+    color:  #E8ECEB;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .Textfield{
+    background-color: #E8ECEB;
+    border: none;
+    padding: 5px 5px;
+    width: 300px;
+    color: #2D3E4E;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  } 
