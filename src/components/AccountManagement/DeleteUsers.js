@@ -9,6 +9,11 @@ const columns = [
   { field: "accountType", headerName: "Account Type", width: 200 },
 ];
 
+function selectedRow(row) {
+  console.log(row);
+  console.log("hi");
+}
+
 function process(entry) {
   return {
     id: entry._id,
@@ -29,8 +34,14 @@ export default function DataTable() {
   }, []);
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid rows={state} columns={columns} pageSize={5} checkboxSelection />
+    <div style={{ height: "800px", width: "100%" }}>
+      <DataGrid
+        rows={state}
+        columns={columns}
+        pageSize={15}
+        checkboxSelection
+        onRowSelected={(row) => selectedRow(row)}
+      />
     </div>
   );
 }
