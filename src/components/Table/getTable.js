@@ -51,7 +51,7 @@ export default function GetTable(props) {
       settable(body);
     };
     fetchData();
-  }, []);
+  }, [props.buttonclicked]);
 
   return (
     <div style={{ height: 440, width: "100%" }}>
