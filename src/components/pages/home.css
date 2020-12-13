@@ -1,38 +1,37 @@
 .Home{
-    background-color:  #8CBDB9;
-    height: 89vmin;
+  background-color:  #8CBDB9;
+  height: 120vmin;
     
 }
+
 .Home-MainTitle{
-        height: 15vmin;
-        background-color: #8CBDB9;
-        font-size: calc(20px + 5vmin);
-        color: #2D3E4E;
-        margin-left: 50px;
+  height: 15vmin;
+  font-size: calc(20px + 5vmin);
+  color: #2D3E4E;
+  margin-left: 50px;
 }
 
 .Home-header{
-    background-color: #8CBDB9;
-    align-items: left;
-    justify-content: left;
-    font-size: calc(2px + 2vmin);
-    color: #2D3E4E;
-    margin-left: 50px;
-    max-width: 500px;
-    height: 8vmin;
-  }
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: #2D3E4E;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  max-width: 500px;
+  height: 8vmin;
+}
+
 .Home-picture{
-  height: 54vmin;
+  height: auto;
   position: absolute;
-  right: 0%;
-  background-color: #8CBDB9;
-  
+  right: 1%;
 }
 
 .Home-Rounds{
-    
-    width: '100%';
-    max-Width: 360px;
-    background-Color:  #bfe6e2;
-    margin-left: 50px;
+  width: '100%';
+  max-Width: 360px;
+  background-Color:  #bfe6e2;
+  margin-left: 50px;
+  margin-right: 2px;
 }
