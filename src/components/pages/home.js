@@ -8,9 +8,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import { Link } from "react-router-dom";
+
 
 
 export default function Home() {
+
 
 return(
     <div className="Home">
@@ -31,9 +34,11 @@ return(
             
             <Grid item xs={12} sm={9} style={{marginLeft: 50}}>
               <List component="nav" className="Home-Rounds" aria-label="mailbox folders">
-                <ListItem button>
-                <ListItemText primary="Round 1" />
+                <Link style={{color:'inherit'}} to="/Data">
+                <ListItem button >
+                <ListItemText primary="Round 1" />  
                 </ListItem>
+                </Link>
                 <Divider />
                 <ListItem button divider>
                  <ListItemText primary="Round 2A" />
