@@ -35,6 +35,10 @@ export default function RegisterForm() {
         setstatusResult(hi.status);
     };
 
+    function validateForm() {
+        return email.length > 0 && password.length > 0 && passwordCheck.length > 0 && userType.length > 0;
+  }
+
     return(
         <div>
             <form onSubmit={submit}>
@@ -102,6 +106,7 @@ export default function RegisterForm() {
                     color="secondary"
                     type="submit"
                     value="Register"
+                    disabled={!validateForm()}
                 >
                     Register
                 </Button>
