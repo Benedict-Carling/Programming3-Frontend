@@ -1,8 +1,8 @@
 import React from "react";
 import "./Login.css";
 import { Grid } from "@material-ui/core";
-import ImageDynamic from './ImageDynamic';
-import LoginForm from './LoginForm';
+import ImageDynamic from '../LoginComponents/ImageDynamic';
+import LoginForm from '../LoginComponents/LoginForm';
 
 export default function Login() {
 
