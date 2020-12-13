@@ -1,31 +1,62 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-
-
 import Register from "../AccountManagement/Register";
 import DeleteUsers from "../AccountManagement/DeleteUsers";
+import {Tabs, Tab, AppBar} from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
-export default function AccountManagement(props) {
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
   return (
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      alignItems="stretch"
-      padding={6}
-      spacing={2}
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
     >
-      <Grid item xs={12} sm={6}>
-        <Card type="outlined">
-          <Register />
-        </Card>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Card type="outlined">
-          <DeleteUsers />
-        </Card>
-      </Grid>
-    </Grid>
+      {value === index && (
+        <Box p={3}>
+          <Typography>
+            {children}
+          </Typography>
+        </Box>
+      )}
+    </div>
   );
 }
+
+export default function AccountManagement(props) {
+  const [selectedTab, setSelectedTab] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
+  return (
+    <div>
+      <AppBar position="static" color="primary">
+        <Tabs value={selectedTab} onChange={handleChange} >
+
+          <Tab label="Register New Account" >
+          </Tab>
+
+          <Tab label="Manage Accounts">
+          </Tab>
+
+        </Tabs>
+      </AppBar>
+
+      <TabPanel value={selectedTab} index={0}>
+        <Register/>
+      </TabPanel>
+
+      <TabPanel value={selectedTab} index={1}>
+        <DeleteUsers />
+      </TabPanel>
+
+    </div>
+  );
+}
+

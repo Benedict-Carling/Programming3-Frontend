@@ -67,7 +67,7 @@ export default function NavBar() {
                   />
                 </IconButton>
               </Link>
-              <Link style={navStyle} to="/Data">
+              <Link style={navStyle} to="/data">
                 <Button>
                   <Typography className={classes.navbartext}>
                     Resolve Issues
@@ -79,7 +79,9 @@ export default function NavBar() {
               </Typography>
               <Link style={navStyle} to="/">
                 <Button>
-                  <Typography className={classes.navbartext}>Home</Typography>
+                  <Typography className={classes.navbartext}>
+                    Home
+                  </Typography>
                 </Button>
               </Link>
               <Link style={navStyle} to="/accountmanagement">
@@ -90,7 +92,9 @@ export default function NavBar() {
                 </Button>
               </Link>
               <Button onClick={logout}>
-                <Typography className={classes.navbartext}>Logout</Typography>
+                <Typography className={classes.navbartext}>
+                  Logout
+                </Typography>
               </Button>
             </Toolbar>
           </AppBar>
@@ -123,11 +127,15 @@ export default function NavBar() {
               </Typography>
               <Link style={navStyle} to="/">
                 <Button>
-                  <Typography className={classes.navbartext}>Home</Typography>
+                  <Typography className={classes.navbartext}>
+                    Home
+                  </Typography>
                 </Button>
               </Link>
               <Button onClick={logout}>
-                <Typography className={classes.navbartext}>Logout</Typography>
+                <Typography className={classes.navbartext}>
+                  Logout
+                </Typography>
               </Button>
             </Toolbar>
           </AppBar>

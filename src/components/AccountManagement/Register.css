@@ -2,79 +2,76 @@
 
 
 .Register {
-
-    background-color: #8CBDB9;
     text-align: left;
-
 }
 
 .Register form{
     margin-left: 50px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 90vmin;
-        text-align: left;
-        padding-top: 10px;
-        
+    max-width: 100px;
+    height: 90vmin;
+    padding-top: 10px;
 }
 
 .Register-MainTitle{
-    background-color: #8CBDB9;
-        height: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: left;
-        font-size: calc(2px + 2vmin);
-        color: #2D3E4E;
-        font: 'oxygen';
-        margin-left: 50px;
-        max-width: 500px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    font-size: calc(2px + 2vmin);
+    color: #2D3E4E;
+    font: 'oxygen';
+    margin-left: 50px;
+    margin-bottom: 30px;
+    max-width: 500px;
 }
+
 .Register-email{
     margin-left: 50px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 10vmin;
-        text-align: left;
-        padding-top: 10px;
-        color: #2D3E4E;
-        font-size: calc(1px + 1vmin);
-       
+    max-width: 100px;
+    height: 10vmin;
+    padding-top: 10px;
+    color: #2D3E4E;
+    font-size: calc(1px + 1vmin);
+}
+
+.Textfield {
+    background-color: #E8ECEB;
+    border: 2px solid #2D3E4E;
+    padding: 5px 5px;
+    width: 500px;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .Register-password{
     margin-left: 50px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 10vmin;
-        text-align: left;
-        padding-top: 10px;
-        color: #2D3E4E;
-        font-size: calc(1px + 1vmin);
+    max-width: 300px;
+    height: 10vmin;
+    padding-top: 10px;
+    color: #2D3E4E;
+    font-size: calc(1px + 1vmin);
     
 }
 
 .Register-passwordCheck{
     margin-left: 50px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 10vmin;
-        text-align: left;
-        padding-top: 10px;
-        color: #2D3E4E;
-        font-size: calc(1px + 1vmin);
+    max-width: 300px;
+    height: 10vmin;
+    padding-top: 10px;
+    color: #2D3E4E;
+    font-size: calc(1px + 1vmin);
     
 }
+
 .Register-userType{
     margin-left: 0px ;
-        max-width: 100px;
-        background-color: #8CBDB9;
-        height: 10vmin;
-        text-align: left;
-        padding-top: 10px;
-        color: #2D3E4E;
-        font-size: calc(1px + 1vmin);
+    max-width: 100px;
+    height: 10vmin;
+    padding-top: 10px;
+    color: #2D3E4E;
+    font-size: calc(1px + 1vmin);
     
 }
 
@@ -82,3 +79,9 @@
     font-size: calc(1px + 1vmin);
 }
 
+.Image{
+    height: auto;
+    position: absolute;
+    right: 1%;
+    margin-bottom: 5%;
+  }

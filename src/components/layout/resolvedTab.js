@@ -63,7 +63,7 @@ export default function SimpleTabs(props) {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="simple tabs example"
+          aria-label="Select a tab"
         >
           <Tab label="Unresolved Conflicts" {...a11yProps(0)} />
           <Tab label="Resolved Conflicts" {...a11yProps(1)} />

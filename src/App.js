@@ -25,18 +25,16 @@ export default function App() {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Login} />
+
             <Route exact path="/home" component={Home} />
+
             <Route exact path="/home" component={GetTable} />
+
             <Route exact path="/register" component={Register} />
 
-            <Route
-              exact
-              path="/accountmanagement"
-              component={AccountManagement}
-            />
-
+            <Route exact path="/accountmanagement" component={AccountManagement}/>
+            
             <Route exact path="/data" component={Data} />
-
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
