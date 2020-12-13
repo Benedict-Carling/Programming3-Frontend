@@ -7,6 +7,7 @@
 
 .Register form{
     margin-left: 50px ;
+<<<<<<< HEAD
     max-width: 100px;
     height: 90vmin;
     padding-top: 10px;
@@ -24,6 +25,27 @@
     margin-left: 50px;
     margin-bottom: 30px;
     max-width: 500px;
+=======
+        max-width: 100px;
+        background-color: #8CBDB9;
+        height: 127vmin;
+        text-align: left;
+        padding-top: 10px;
+        
+}
+
+.Register-MainTitle{
+    background-color: #8CBDB9;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        font-size: calc(2px + 2vmin);
+        color: #2D3E4E;
+        margin-left: 50px;
+        max-width: 500px;
+>>>>>>> 1e874dff5b8afe755bf9d4d24d7aee895be28899
 }
 
 .Register-email{
