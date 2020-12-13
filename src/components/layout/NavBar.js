@@ -77,7 +77,7 @@ export default function NavBar() {
               <Typography variant="h6" className={classes.title}>
                 Account Type: {userData.user.type}
               </Typography>
-              <Link style={navStyle} to="/">
+              <Link style={navStyle} to="/home">
                 <Button>
                   <Typography className={classes.navbartext}>
                     Home
