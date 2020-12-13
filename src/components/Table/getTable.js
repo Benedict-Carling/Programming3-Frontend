@@ -23,7 +23,7 @@ export default function GetTable(props) {
       width: 200,
     },
     { field: "ExpertComment", headername: " Expert Comment", width: 200 },
-    { field: "ImagePath", headername: "Image Path", width: 200 },
+    //{ field: "ImagePath", headername: "Image Path", width: 200 },
   ];
   const [table, settable] = useState([]);
 
@@ -58,7 +58,7 @@ export default function GetTable(props) {
       <DataGrid
         rows={table}
         columns={columns}
-        pageSize={6}
+        pageSize={5}
         onRowSelected={(row) => selectedRow(row)}
       />
     </div>
