@@ -8,6 +8,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import "./Register.css";
 import Button from "@material-ui/core/Button";
+import SuccessAlert from "./SuccessAlert";
+import ErrorAlert from "./ErrorAlert";
 
 export default function RegisterForm() {
     const [email, setEmail] = useState("");
@@ -35,9 +37,18 @@ export default function RegisterForm() {
         setstatusResult(hi.status);
     };
 
-    function validateForm() {
+    function validateForm() { // makes sure that there are no empty fields when you submit a registration
         return email.length > 0 && password.length > 0 && passwordCheck.length > 0 && userType.length > 0;
   }
+
+    function AlertCheck(){
+        if(statusResult === 200){
+            return <SuccessAlert/>;
+        }
+        else{
+            return <ErrorAlert/>;
+        }
+    }
 
     return(
         <div>
@@ -102,15 +113,17 @@ export default function RegisterForm() {
 
                 <Button
                     onClick={submit}
+                    onSubmit={AlertCheck()}
                     variant="contained"
                     color="secondary"
                     type="submit"
                     value="Register"
-                    disabled={!validateForm()}
+                    disabled={!validateForm()} // disables the button unless all the conditions stated in the function validateForm() are met
                 >
                     Register
                 </Button>
-        
+
+                
             </form>
         </div>
     );
