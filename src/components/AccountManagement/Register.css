@@ -1,6 +1,7 @@
 .Register {
-  text-align: left;
   background-color: #B5D4E1;
+  margin-top: 8px;
+  height: 100vh;
 }
 
 .Register form {
@@ -8,7 +9,6 @@
   max-width: 100px;
   height: 80vmin;
   padding-top: 10px;
-  background-color: #B5D4E1
 }
 
 .Register-MainTitle {
@@ -17,11 +17,11 @@
   flex-direction: column;
   align-items: left;
   justify-content: left;
-  font-size: calc(2px + 2vmin);
+  font-size: calc(20px + 2vmin);
   color: #2d3e4e;
   font: "oxygen";
   margin-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   max-width: 500px;
 }
 
@@ -29,7 +29,7 @@
   margin-left: 50px;
   max-width: 100px;
   height: 10vmin;
-  padding-top: 10px;
+  padding-top: 5px;
   color: #2d3e4e;
   font-size: calc(1px + 1vmin);
 }
@@ -48,7 +48,7 @@
   margin-left: 50px;
   max-width: 300px;
   height: 10vmin;
-  padding-top: 10px;
+  padding-top: 5px;
   color: #2d3e4e;
   font-size: calc(1px + 1vmin);
 }
@@ -57,7 +57,7 @@
   margin-left: 50px;
   max-width: 300px;
   height: 10vmin;
-  padding-top: 10px;
+  padding-top: 5px;
   color: #2d3e4e;
   font-size: calc(1px + 1vmin);
 }
@@ -66,7 +66,7 @@
   margin-left: 0px;
   max-width: 100px;
   height: 10vmin;
-  padding-top: 10px;
+  padding-top: 5px;
   color: #2d3e4e;
   font-size: calc(1px + 1vmin);
 }
