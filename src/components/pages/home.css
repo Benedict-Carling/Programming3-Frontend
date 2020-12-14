@@ -1,14 +1,18 @@
 .Home{
   background-color:  #B5D4E1;
-  height: 89vmin;
+  height: auto;
+  
     
 }
 
 .Home-MainTitle{
-  height: 15vmin;
-  font-size: calc(20px + 5vmin);
+  height: 14vmin;
+  font-size: calc(10px + 5vmin);
   color: #2D3E4E;
   margin-left: 50px;
+  
+  margin-top: -50px;
+  
 }
 
 .Home-header{
@@ -22,11 +26,7 @@
   height: 8vmin;
 }
 
-.Home-picture{
-  height: 54vmin;
-  position: absolute;
-  right: 0%;
-}
+
 
 .Home-Rounds{
   width: '100%';
