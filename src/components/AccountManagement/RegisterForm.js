@@ -19,7 +19,7 @@ export default function RegisterForm() {
   const [statusResult, setstatusResult] = useState("");
   const { setUserData } = useContext(UserContext);
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
-  
+
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -40,11 +40,22 @@ export default function RegisterForm() {
     );
     console.log(hi);
     setstatusResult(hi.status);
-   
+
     if (hi.status === 200) setOpenSuccessMessage(true);
-   
-  
-    
+    // this bit of the code still runs if theres an error
+    // but the status code will be 400 or 404 or something like
+    // that we can say if status code is not null and not 200 theres
+    // been an error
+    // iif status code !== null && status code !== 200
+    // then we want to open the error success message
+    // and
+    // if theres an error hi.msg contains the error message of hi.data.msg
+    //or something like that if you just console.log hi and look in inspect
+    // you should see how to get the message
+    // then you can set the string from hi.msg to a variable and pass that into
+    // the error message and display it
+    // you can display javascript variable it html/(the return section)
+    // like <div>{errorMessage}</div?
   };
 
   function validateForm() {
@@ -56,8 +67,6 @@ export default function RegisterForm() {
       userType.length > 0
     );
   }
-
-  
 
   return (
     <div>
@@ -139,7 +148,6 @@ export default function RegisterForm() {
         </Button>
       </form>
       <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
-      
     </div>
   );
 }
