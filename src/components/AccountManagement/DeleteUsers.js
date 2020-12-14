@@ -2,6 +2,8 @@ import * as React from "react";
 import { useState } from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import Axios from "axios";
+import { Button } from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 
 const columns = [
   { field: "id", headerName: "ID", width: 200 },
@@ -34,11 +36,24 @@ export default function DataTable() {
   }, []);
 
   return (
-    <div style={{ height: "800px", width: "100%" }}>
-      <DataGrid
+    <div style={{ height: "650px", width: "100%" }}>
+      <Grid
+        container
+        direction="row"
+        justify="flex-end"
+        alignItems="center"
+        >
+          <Grid item>
+            <Button variant="contained" color="secondary" type="submit" >
+              DELETE
+            </Button>
+          </Grid>
+        </Grid>
+
+        <DataGrid
         rows={state}
         columns={columns}
-        pageSize={15}
+        pageSize={10}
         checkboxSelection
         onRowSelected={(row) => selectedRow(row)}
       />
