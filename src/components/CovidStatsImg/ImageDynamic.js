@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   imagePosition: {
-    textAlign: "right",
+    textAlign: "centre",
   },
   responsiveImage: {
     textAlign: "right",
@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
       maxHeight: "200px",
     },
     [theme.breakpoints.up("sm")]: {
-      height: "300px",
-      maxHeight: "300px",
+      height: "216px",
+      maxHeight: "216px",
     },
     [theme.breakpoints.up("md")]: {
       height: "300px",
