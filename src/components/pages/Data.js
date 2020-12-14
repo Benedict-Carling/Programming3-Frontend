@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import GetTable from "../../components/Table/getTable";
-import NavBar from "../../components/layout/NavBar";
 import SimpleTabs from "../../components/layout/resolvedTab";
-import MainTable from "../../components/layout/CollapsibleTable";
-
 import EditTable from "../Table/EditTable";
-
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 

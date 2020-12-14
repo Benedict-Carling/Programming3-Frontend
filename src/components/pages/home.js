@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import "./home.css";
 import List from '@material-ui/core/List';
@@ -9,10 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import covidStats from "./covidStats.png";
 
-
-
 export default function Home() {
-
 
 return(
     <div className="Home">
