@@ -1,84 +1,81 @@
 .Register {
-    text-align: left;
+  text-align: left;
 }
 
-.Register form{
-    margin-left: 50px ;
-    max-width: 100px;
-    height: 90vmin;
-    padding-top: 10px;
+.Register form {
+  margin-left: 50px;
+  max-width: 100px;
+  height: 80vmin;
+  padding-top: 10px;
 }
 
-.Register-MainTitle{
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    font-size: calc(2px + 2vmin);
-    color: #2D3E4E;
-    font: 'oxygen';
-    margin-left: 50px;
-    margin-bottom: 30px;
-    max-width: 500px;
+.Register-MainTitle {
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(2px + 2vmin);
+  color: #2d3e4e;
+  font: "oxygen";
+  margin-left: 50px;
+  margin-bottom: 30px;
+  max-width: 500px;
 }
 
-.Register-email{
-    margin-left: 50px ;
-    max-width: 100px;
-    height: 10vmin;
-    padding-top: 10px;
-    color: #2D3E4E;
-    font-size: calc(1px + 1vmin);
+.Register-email {
+  margin-left: 50px;
+  max-width: 100px;
+  height: 10vmin;
+  padding-top: 10px;
+  color: #2d3e4e;
+  font-size: calc(1px + 1vmin);
 }
 
 .Textfield {
-    background-color: #E8ECEB;
-    border: 2px solid #2D3E4E;
-    padding: 5px 5px;
-    width: 500px;
-    border-radius: 5px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+  background-color: #e8eceb;
+  border: 2px solid #2d3e4e;
+  padding: 5px 5px;
+  width: 500px;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.Register-password{
-    margin-left: 50px ;
-    max-width: 300px;
-    height: 10vmin;
-    padding-top: 10px;
-    color: #2D3E4E;
-    font-size: calc(1px + 1vmin);
-    
+.Register-password {
+  margin-left: 50px;
+  max-width: 300px;
+  height: 10vmin;
+  padding-top: 10px;
+  color: #2d3e4e;
+  font-size: calc(1px + 1vmin);
 }
 
-.Register-passwordCheck{
-    margin-left: 50px ;
-    max-width: 300px;
-    height: 10vmin;
-    padding-top: 10px;
-    color: #2D3E4E;
-    font-size: calc(1px + 1vmin);
-    
+.Register-passwordCheck {
+  margin-left: 50px;
+  max-width: 300px;
+  height: 10vmin;
+  padding-top: 10px;
+  color: #2d3e4e;
+  font-size: calc(1px + 1vmin);
 }
 
-.Register-userType{
-    margin-left: 0px ;
-    max-width: 100px;
-    height: 10vmin;
-    padding-top: 10px;
-    color: #2D3E4E;
-    font-size: calc(1px + 1vmin);
-    
+.Register-userType {
+  margin-left: 0px;
+  max-width: 100px;
+  height: 10vmin;
+  padding-top: 10px;
+  color: #2d3e4e;
+  font-size: calc(1px + 1vmin);
 }
 
-.Register-Alert{
-    font-size: calc(1px + 1vmin);
+.Register-Alert {
+  font-size: calc(1px + 1vmin);
 }
 
-.Image{
-    height: auto;
-    position: absolute;
-    right: 1%;
-    margin-bottom: 5%;
-  }
+.Image {
+  height: auto;
+  position: absolute;
+  right: 1%;
+  margin-bottom: 5%;
+}
