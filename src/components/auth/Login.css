@@ -1,9 +1,7 @@
-
 .Login {
-  background-color: #043c74;    
-  display: flex;
-  height: 100vh;
-}
+    background-color: #043c74;
+    height: auto;
+  }
 
 .Login form {
   margin-left: 50px ;
