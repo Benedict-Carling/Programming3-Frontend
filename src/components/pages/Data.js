@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import SimpleTabs from "../../components/layout/resolvedTab";
+
+import MainTable from "../../components/layout/CollapsibleTable";
+import SearchBar from "../../components/Table/SearchBar";
+
+
 import EditTable from "../Table/EditTable";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -20,6 +25,7 @@ export default function Data() {
     >
       <Grid item xs={12} sm={9}>
         <Card type="outlined">
+          <SearchBar/>
           <SimpleTabs
             setSelectedID={setSelectedID}
             buttonclicked={buttonclicked}
