@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import "./home.css";
 import List from '@material-ui/core/List';
@@ -8,10 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 
-
-
 export default function Home() {
-
 
 return(
     <div className="Home">
