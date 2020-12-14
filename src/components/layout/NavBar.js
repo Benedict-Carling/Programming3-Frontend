@@ -91,6 +91,13 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+              <Link style={navStyle} to="/logs">
+                <Button>
+                  <Typography className={classes.navbartext}>
+                    Update Logs
+                  </Typography>
+                </Button>
+              </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>
                   Logout

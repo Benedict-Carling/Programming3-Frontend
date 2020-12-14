@@ -8,6 +8,7 @@ import Data from "./components/pages/Data";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import GetTable from "./components/Table/getTable";
+import Logs from "./components/pages/Logs";
 
 
 import "./style.css";
@@ -35,6 +36,8 @@ export default function App() {
             <Route exact path="/accountmanagement" component={AccountManagement}/>
             
             <Route exact path="/data" component={Data} />
+
+            <Route exact path="/logs" component={Logs} /> 
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
