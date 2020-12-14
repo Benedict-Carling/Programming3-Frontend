@@ -34,7 +34,10 @@ export default function EditTable(props) {
     var time = date + '/' + month + '/' + year 
     + ' ' + hours + ':' + min + ':' + sec;
     const log = {
-      InDate : time
+      InDate : time,
+      InId: props.selectedID,
+      InComment: props.expertComment,
+      InInterpretation: props.expertInterpretation,
     }
     console.log(log)
 
