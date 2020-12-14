@@ -1,5 +1,6 @@
 .Register {
   text-align: left;
+  background-color: #B5D4E1;
 }
 
 .Register form {
@@ -7,6 +8,7 @@
   max-width: 100px;
   height: 80vmin;
   padding-top: 10px;
+  background-color: #B5D4E1
 }
 
 .Register-MainTitle {
@@ -33,7 +35,7 @@
 }
 
 .Textfield {
-  background-color: #e8eceb;
+  background-color: #B5D4E1;
   border: 2px solid #2d3e4e;
   padding: 5px 5px;
   width: 500px;

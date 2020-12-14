@@ -1,6 +1,6 @@
 .Home{
-  background-color:  #8CBDB9;
-  height: 120vmin;
+  background-color:  #B5D4E1;
+  height: 89vmin;
     
 }
 
@@ -23,15 +23,15 @@
 }
 
 .Home-picture{
-  height: auto;
+  height: 54vmin;
   position: absolute;
-  right: 1%;
+  right: 0%;
 }
 
 .Home-Rounds{
   width: '100%';
   max-Width: 360px;
-  background-Color:  #bfe6e2;
+  background-Color:  #c5dfe6;
   margin-left: 50px;
   margin-right: 2px;
 }
