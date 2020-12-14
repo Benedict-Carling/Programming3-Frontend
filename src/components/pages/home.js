@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
+import covidStats from "./covidStats.png";
 
 
 
@@ -22,6 +23,9 @@ return(
                       REACT 2
                     </h1>
                 </header>
+            </Grid>
+            <Grid item xs={12} sm={9}>
+                <img src={covidStats} className="Home-picture" alt="covidStats" />
             </Grid>
 
             <Grid item xs={12} sm={6}>
@@ -54,10 +58,6 @@ return(
                  <ListItemText primary="Add new Round" />
                 </ListItem>
               </List>
-            </Grid>
-
-            <Grid item xs={12} sm={5}>
-                <ImageDynamic className="Home-picture" />
             </Grid>
         </Grid>
       </div>  

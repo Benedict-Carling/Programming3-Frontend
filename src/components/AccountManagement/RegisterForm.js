@@ -19,6 +19,7 @@ export default function RegisterForm() {
   const [statusResult, setstatusResult] = useState("");
   const { setUserData } = useContext(UserContext);
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
+  
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -39,7 +40,11 @@ export default function RegisterForm() {
     );
     console.log(hi);
     setstatusResult(hi.status);
+   
     if (hi.status === 200) setOpenSuccessMessage(true);
+   
+  
+    
   };
 
   function validateForm() {
@@ -52,13 +57,7 @@ export default function RegisterForm() {
     );
   }
 
-  function AlertCheck() {
-    if (statusResult === 200) {
-      return <SuccessAlert />;
-    } else {
-      return <ErrorAlert />;
-    }
-  }
+  
 
   return (
     <div>
@@ -130,7 +129,6 @@ export default function RegisterForm() {
 
         <Button
           onClick={submit}
-          onSubmit={AlertCheck()}
           variant="contained"
           color="secondary"
           type="submit"
@@ -141,6 +139,7 @@ export default function RegisterForm() {
         </Button>
       </form>
       <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
+      
     </div>
   );
 }
