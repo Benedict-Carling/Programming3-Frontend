@@ -9,19 +9,18 @@ export default function Register() {
 
   return (
     <div className= "Register">
-
-      <header className="Register-MainTitle">
-        <h1 className="Register-title">
+      <Grid container spacing={2} padding='5px' >
+        <Grid item xs={12}>
+        <h1 className="Register-MainTitle">
           Register a new account:
         </h1>
-      </header>
+        </Grid>
 
-      <Grid container spacing={5} padding='5px' >
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <RegisterForm/>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <ImageDynamic className="Image"/>
         </Grid>
       </Grid>
