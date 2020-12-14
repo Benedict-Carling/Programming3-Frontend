@@ -19,13 +19,36 @@ export default function EditTable(props) {
       InputComment: props.expertComment,
       InputValidation: props.expertInterpretation,
     };
-    const res = await Axios.post(
+    const resdb = await Axios.post(
       "http://localhost:5000/data/add-comment",
       jsonobj
     );
-    if (res.status === 200) props.setButtonclicked(true);
-    console.log("response", res);
+    if (resdb.status === 200) props.setButtonclicked(true);
+    console.log("response", resdb);
+    var date = new Date().getDate(); //Current Date
+    var month = new Date().getMonth() + 1; //Current Month
+    var year = new Date().getFullYear(); //Current 
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current
+    var time = date + '/' + month + '/' + year 
+    + ' ' + hours + ':' + min + ':' + sec;
+    const log = {
+      InDate : time,
+      InId: props.selectedID,
+      InComment: props.expertComment,
+      InInterpretation: props.expertInterpretation,
+    }
+    console.log(log)
+
+    const reslog = await Axios.post(
+      "http://localhost:5000/log/add-log",
+      log
+    );
+    
   };
+  
+
 
   function getimgpath() {
     if (props.selectedID > 17) return "17";
