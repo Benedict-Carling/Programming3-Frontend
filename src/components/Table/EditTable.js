@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import UserContext from "../../context/UserContext"
 
 export default function EditTable(props) {
+  const { userData, setUserData } = useContext(UserContext);
   function committodatabase() {
     props.setButtonclicked(false);
     console.log(props.selectedID);
     console.log(props.expertComment);
     console.log(props.expertInterpretation);
+    
     asynccommittodatabase();
   }
 
@@ -33,7 +36,11 @@ export default function EditTable(props) {
     var sec = new Date().getSeconds(); //Current
     var time = date + '/' + month + '/' + year 
     + ' ' + hours + ':' + min + ':' + sec;
+    
+      
     const log = {
+      InEmail: userData.user.email,
+      InType : userData.user.type,
       InDate : time,
       InId: props.selectedID,
       InComment: props.expertComment,
