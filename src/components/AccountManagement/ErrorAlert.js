@@ -8,6 +8,7 @@ import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    right: 0,
     width: '100%',
     '& > * + *': {
       marginTop: theme.spacing(2),
@@ -36,7 +37,7 @@ export default function SimpleAlerts(props) {
           </IconButton>
         }
       >
-        There was an error during Registration 
+        {props.Error}
       </Alert>
     </Collapse>
   </div>

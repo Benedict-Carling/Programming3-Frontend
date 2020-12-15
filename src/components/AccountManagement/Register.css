@@ -81,3 +81,9 @@
   right: 1%;
   margin-bottom: 5%;
 }
+
+.Alert{
+  
+  float: right;
+  text-align: right;
+}

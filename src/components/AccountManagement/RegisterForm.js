@@ -10,8 +10,9 @@ import "./Register.css";
 import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
+import { Grid } from "@material-ui/core";
 
-export default function RegisterForm() {
+export default function RegisterForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordCheck, setPasswordCheck] = useState("");
@@ -19,6 +20,12 @@ export default function RegisterForm() {
   const [statusResult, setstatusResult] = useState("");
   const { setUserData } = useContext(UserContext);
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
+  
+  const [openErrorMessage, setOpenErrorMessage] = useState(false);
+  const [ErrorMessage, setErrorMessage] = useState("");
+  const [res, setres] = useState("");
+
+
 
   const history = useHistory();
 
@@ -34,28 +41,23 @@ export default function RegisterForm() {
     console.log(passwordCheck);
     const newUser = { email, password, passwordCheck, userType };
     console.log(newUser);
-    const hi = await Axios.post(
-      "http://localhost:5000/users/register",
-      newUser
-    );
-    console.log(hi);
-    setstatusResult(hi.status);
-
-    if (hi.status === 200) setOpenSuccessMessage(true);
-    // this bit of the code still runs if theres an error
-    // but the status code will be 400 or 404 or something like
-    // that we can say if status code is not null and not 200 theres
-    // been an error
-    // iif status code !== null && status code !== 200
-    // then we want to open the error success message
-    // and
-    // if theres an error hi.msg contains the error message of hi.data.msg
-    //or something like that if you just console.log hi and look in inspect
-    // you should see how to get the message
-    // then you can set the string from hi.msg to a variable and pass that into
-    // the error message and display it
-    // you can display javascript variable it html/(the return section)
-    // like <div>{errorMessage}</div?
+   
+   await Axios.post(
+    "http://localhost:5000/users/register",
+    newUser
+   )
+       
+    .then(response=> {
+      console.log(response);
+      setOpenSuccessMessage(true);
+    })
+    .catch(error=> {
+      setOpenErrorMessage(true);
+      console.log(error.response.data.msg);
+      setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
+      console.log({ErrorMessage});
+    })
+    
   };
 
   function validateForm() {
@@ -67,9 +69,10 @@ export default function RegisterForm() {
       userType.length > 0
     );
   }
-
+  
   return (
     <div>
+      
       <form onSubmit={submit}>
         <label className="Register-email">
           <h1 htmlFor="register-email">Email:</h1>
@@ -147,7 +150,14 @@ export default function RegisterForm() {
           Register
         </Button>
       </form>
-      <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
+    
+      <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
+        <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
+        
+      <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
+      </Grid>
     </div>
+
   );
+
 }
