@@ -6,11 +6,14 @@ import "../auth/Login.css";
 import {Grid} from '@material-ui/core';
 import PasswordButton from './PasswordButton';
 import Button from "@material-ui/core/Button";
+import ErrorAlert from "../AccountManagement/ErrorAlert.js";
 
 export default function LoginForm() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [ErrorMessage, setErrorMessage] = useState("");
+    const [openErrorMessage, setOpenErrorMessage] = useState(false);
 
     const { setUserData } = useContext(UserContext);
     const history = useHistory();
@@ -18,15 +21,26 @@ export default function LoginForm() {
     const submit = async (e) => {
         e.preventDefault();
         const logInUser = { email, password };
-        const loginRes = await Axios.post(
-            "http://localhost:5000/users/login",
-            logInUser
-        );
-        setUserData({
-            token: loginRes.data.token,
-            user: loginRes.data.user,
-        });
-        history.push("/home");
+        try{
+            const loginRes = await Axios.post(
+           "http://localhost:5000/users/login",
+           logInUser 
+          
+       ); 
+            setUserData({
+                token: loginRes.data.token,
+                user: loginRes.data.user,
+            });
+            history.push("/home");
+       }
+        catch(error) {
+           setOpenErrorMessage(true);
+           console.log(error.response.data.msg);
+           setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
+           console.log({ErrorMessage});
+         }
+      
+       
     };
 
     return(
@@ -67,7 +81,9 @@ export default function LoginForm() {
             <Grid item xs={5} md={5} >
                 <PasswordButton/>
             </Grid>
-           
+            <Grid className="Alert" item xs={5} sm ={5} md={9} lg={12} >
+                <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
+            </Grid>
         </Grid>
     );
 }
