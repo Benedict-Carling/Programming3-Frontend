@@ -4,6 +4,7 @@ import DeleteUsers from "../AccountManagement/DeleteUsers";
 import {Tabs, Tab, AppBar} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import SearchBar from "../../components/Table/SearchBar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,6 +54,7 @@ export default function AccountManagement(props) {
       </TabPanel>
 
       <TabPanel value={selectedTab} index={1}>
+        <SearchBar/>
         <DeleteUsers />
       </TabPanel>
 
