@@ -17,13 +17,11 @@ export default function RegisterForm(props) {
   const [password, setPassword] = useState("");
   const [passwordCheck, setPasswordCheck] = useState("");
   const [userType, setAccountType] = useState("");
-  const [statusResult, setstatusResult] = useState("");
   const { setUserData } = useContext(UserContext);
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
-  
   const [openErrorMessage, setOpenErrorMessage] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState("");
-  const [res, setres] = useState("");
+  
 
 
 
@@ -53,9 +51,7 @@ export default function RegisterForm(props) {
     })
     .catch(error=> {
       setOpenErrorMessage(true);
-      console.log(error.response.data.msg);
       setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
-      console.log({ErrorMessage});
     })
     
   };
@@ -153,8 +149,7 @@ export default function RegisterForm(props) {
     
       <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
         <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
-        
-      <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
+        <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
       </Grid>
     </div>
 

@@ -35,9 +35,7 @@ export default function LoginForm() {
        }
         catch(error) {
            setOpenErrorMessage(true);
-           console.log(error.response.data.msg);
            setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
-           console.log({ErrorMessage});
          }
       
        
