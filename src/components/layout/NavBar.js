@@ -94,7 +94,7 @@ export default function NavBar() {
               <Link style={navStyle} to="/logs">
                 <Button>
                   <Typography className={classes.navbartext}>
-                    Update Logs
+                    Logs
                   </Typography>
                 </Button>
               </Link>
