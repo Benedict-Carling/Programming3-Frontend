@@ -70,7 +70,7 @@ export default function NavBar() {
               <Link style={navStyle} to="/data">
                 <Button>
                   <Typography className={classes.navbartext}>
-                    Resolve Issues
+                    Review Discrepancies
                   </Typography>
                 </Button>
               </Link>

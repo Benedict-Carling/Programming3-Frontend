@@ -65,8 +65,8 @@ export default function SimpleTabs(props) {
           onChange={handleChange}
           aria-label="Select a tab"
         >
-          <Tab label="Unresolved Conflicts" {...a11yProps(0)} />
-          <Tab label="Resolved Conflicts" {...a11yProps(1)} />
+          <Tab label="Unresolved Discrepancies" {...a11yProps(0)} />
+          <Tab label="Resolved Discrepancies" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>

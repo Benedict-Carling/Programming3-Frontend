@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
+import grey from '@material-ui/core/colors/grey';
 
 export default function EditTable(props) {
   const useStyles = makeStyles((theme) => ({
@@ -82,13 +83,28 @@ export default function EditTable(props) {
     );
     
   };
-  
+
+  const darkergrey = grey[500]
+
+  const useLabelStyles = makeStyles({
+    root: {
+      backgroundColor: darkergrey,
+      "&.Mui-focused": {
+        backgroundColor: darkergrey
+      },
+      "&:hover": {
+        backgroundColor: darkergrey
+      }
+    }
+  });
 
 
   function getimgpath() {
     if (props.selectedID > 17) return "17";
     else return props.selectedID;
   }
+
+  const labelClasses = useLabelStyles();
 
   return (
     <div>
@@ -106,6 +122,7 @@ export default function EditTable(props) {
         label="ID"
         variant="filled"
         value={props.selectedID}
+        InputProps={{classes:labelClasses}}
       />
       <TextField
         onChange={(e) => props.setExpertComment(e.target.value)}
@@ -130,10 +147,10 @@ export default function EditTable(props) {
           variant="filled"
         >
           
-          <MenuItem value={"Test: R;Validity: -;IgG:-"}>Test: R;Validity: -;IgG:-</MenuItem>
-          <MenuItem value={"Test: R;Validity: I;IgG:-"}>Test: R;Validity: I;IgG:-</MenuItem>
-          <MenuItem value={"Test: R;Validity: V;IgG: N"}>Test: R;Validity: V;IgG: N</MenuItem>
-          <MenuItem value={"Test: R;Validity: V;IgG: P"}>Test: R;Validity: V;IgG: P</MenuItem>
+          <MenuItem value={"Test: uR; Validity: -; IgG:-"}>Test: uR; Validity: -; IgG:-</MenuItem>
+          <MenuItem value={"Test: R; Validity: I; IgG:-"}>Test: R; Validity: I; IgG:-</MenuItem>
+          <MenuItem value={"Test: R; Validity: V; IgG: N"}>Test: R; Validity: V; IgG: N</MenuItem>
+          <MenuItem value={"Test: R; Validity: V; IgG: P"}>Test: R; Validity: V; IgG: P</MenuItem>
         </Select>
       </FormControl>
         
