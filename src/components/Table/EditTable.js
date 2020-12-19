@@ -3,10 +3,26 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import UserContext from "../../context/UserContext"
+import UserContext from "../../context/UserContext";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from '@material-ui/core/styles';
 
 export default function EditTable(props) {
+  const useStyles = makeStyles((theme) => ({
+    button: {
+      display: 'block',
+      marginTop: theme.spacing(2),
+    },
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+  }));
   const { userData, setUserData } = useContext(UserContext);
+  const [open, setOpen] = React.useState(false);
   function committodatabase() {
     props.setButtonclicked(false);
     console.log(props.selectedID);
@@ -15,6 +31,18 @@ export default function EditTable(props) {
     
     asynccommittodatabase();
   }
+  const classes = useStyles();
+  const handleChange = (e) => {
+    props.setExpertInterpretation(e.target.value);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   const asynccommittodatabase = async (e) => {
     const jsonobj = {
@@ -88,15 +116,28 @@ export default function EditTable(props) {
         rows={6}
         variant="filled"
       />
-      <TextField
-        onChange={(e) => props.setExpertInterpretation(e.target.value)}
-        value={props.expertInterpretation}
-        id="userinter"
-        label="Expert Interpretation"
-        multiline
-        rows={6}
-        variant="filled"
-      />
+      
+      <FormControl className={classes.formControl}>
+        <InputLabel id="demo-controlled-open-select-label">Expert interpretation</InputLabel>
+        <Select
+          labelId="Expert Interpretation"
+          id="userinter"
+          open={open}
+          onClose={handleClose}
+          onOpen={handleOpen}
+          onChange={handleChange}
+          value={props.expertInterpretation}
+          variant="filled"
+        >
+          
+          <MenuItem value={"Test: R;Validity: -;IgG:-"}>Test: R;Validity: -;IgG:-</MenuItem>
+          <MenuItem value={"Test: R;Validity: I;IgG:-"}>Test: R;Validity: I;IgG:-</MenuItem>
+          <MenuItem value={"Test: R;Validity: V;IgG: N"}>Test: R;Validity: V;IgG: N</MenuItem>
+          <MenuItem value={"Test: R;Validity: V;IgG: P"}>Test: R;Validity: V;IgG: P</MenuItem>
+        </Select>
+      </FormControl>
+        
+      
       <Button variant="contained" color="primary" onClick={committodatabase}>
         Commit to Database
       </Button>
