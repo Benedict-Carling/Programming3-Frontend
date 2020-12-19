@@ -130,7 +130,7 @@ export default function EditTable(props) {
           variant="filled"
         >
           
-          <MenuItem value={"Test: uR;Validity: -;IgG:-"}>Test: uR;Validity: -;IgG:-</MenuItem>
+          <MenuItem value={"Test: R;Validity: -;IgG:-"}>Test: R;Validity: -;IgG:-</MenuItem>
           <MenuItem value={"Test: R;Validity: I;IgG:-"}>Test: R;Validity: I;IgG:-</MenuItem>
           <MenuItem value={"Test: R;Validity: V;IgG: N"}>Test: R;Validity: V;IgG: N</MenuItem>
           <MenuItem value={"Test: R;Validity: V;IgG: P"}>Test: R;Validity: V;IgG: P</MenuItem>

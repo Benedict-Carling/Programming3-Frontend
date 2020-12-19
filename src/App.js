@@ -29,6 +29,10 @@ export default function App() {
 
             <Route exact path="/home" component={Home} />
 
+            <Route exact path="/home" component={GetTable} />
+
+            <Route exact path="/register" component={Register} />
+
             <Route exact path="/accountmanagement" component={AccountManagement}/>
             
             <Route exact path="/data" component={Data} />
