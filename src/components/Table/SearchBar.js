@@ -102,11 +102,11 @@ export default function SearchBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-    const handleKeyDown = (event, text) => {
-      if (event.key === 'Enter') {
-        console.log(text)
-      }
+  const handleKeyDown = (event, text) => {
+    if (event.key === 'Enter') {
+      console.log(text)
     }
+  }
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
