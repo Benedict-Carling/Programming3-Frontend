@@ -101,6 +101,7 @@ export default function EditTable(props) {
 
   function getimgpath() {
     if (props.selectedID > 17) return "17";
+    if (!props.selectedID) return "NoImage";
     else return props.selectedID;
   }
 
