@@ -29,6 +29,7 @@ export default function GetTable(props) {
 
   function selectedRow(row) {
     props.setSelectedID(row.data.id);
+    props.setFlag(row.data.Flag);
     console.log(row.data.id);
   }
 

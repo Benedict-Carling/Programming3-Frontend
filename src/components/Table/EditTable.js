@@ -102,7 +102,9 @@ export default function EditTable(props) {
   function getimgpath() {
     if (props.selectedID > 17) return "17";
     if (!props.selectedID) return "NoImage";
+    if(props.selectedFlag === "Corrupt") return "CorruptedImage";
     else return props.selectedID;
+
   }
 
   const labelClasses = useLabelStyles();

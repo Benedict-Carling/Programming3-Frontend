@@ -11,6 +11,7 @@ import Card from "@material-ui/core/Card";
 
 export default function Data() {
   const [selectedID, setSelectedID] = useState("");
+  const [selectedFlag, setFlag] = useState("");
   const [expertComment, setExpertComment] = useState("");
   const [expertInterpretation, setExpertInterpretation] = useState("");
   const [buttonclicked, setButtonclicked] = useState(false);
@@ -28,6 +29,7 @@ export default function Data() {
           <SearchBar/>
           <SimpleTabs
             setSelectedID={setSelectedID}
+            setFlag = {setFlag}
             buttonclicked={buttonclicked}
           />
         </Card>
@@ -36,6 +38,7 @@ export default function Data() {
         <Card type="outlined"></Card>
         <EditTable
           selectedID={selectedID}
+          selectedFlag={selectedFlag}
           setExpertComment={setExpertComment}
           expertComment={expertComment}
           expertInterpretation={expertInterpretation}
