@@ -12,6 +12,8 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import SearchIcon from '@material-ui/icons/Search';
 import FlagIcon from '@material-ui/icons/Flag';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -64,10 +66,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   sectionDesktop: {
+    
+    flexGrow: 1,
+    textAlign: "left",
+    float: "left",
+    textalign: "left",
+    /*
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-    },
+    },*/
   },
   sectionMobile: {
     display: 'flex',
@@ -107,7 +115,7 @@ export default function SearchBar() {
       console.log(text)
     }
   }
-
+/*
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -116,11 +124,9 @@ export default function SearchBar() {
       id={menuId}
       keepMounted
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      
     </Menu>
   );
 
@@ -160,7 +166,7 @@ export default function SearchBar() {
       </MenuItem>
     </Menu>
   );
-
+*/
   return (
     <div className={classes.grow}>
       <AppBar position="static">
@@ -182,27 +188,16 @@ export default function SearchBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton color="inherit">
-                <PermIdentityIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <VpnKeyIcon />
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <FlagIcon />
-            </IconButton>
+          <ButtonGroup variant="text" aria-label="text button group">
+            <Button>U_passcode</Button>
+            <Button>ID</Button>
+            <Button>Flag</Button>
+            </ButtonGroup>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
-              aria-controls={mobileMenuId}
+              //aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
@@ -212,8 +207,7 @@ export default function SearchBar() {
           </div>
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+     
     </div>
   );
 }
