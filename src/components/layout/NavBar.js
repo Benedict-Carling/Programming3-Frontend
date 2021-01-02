@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import UserContext from "../../context/UserContext";
 import { useHistory } from "react-router-dom";
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import { Link } from "react-router-dom";
 
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "white",
-    flexGrow: 1,
+    flexGrow: 1, 
     textAlign: "left",
     padding: "10",
   },
@@ -49,7 +50,7 @@ export default function NavBar() {
   };
 
   try {
-    if (userData.user.type === "webmaster")
+    if (userData.user.type === "webmaster") {/* this is the functionaly that the webmaster account displays*/}
       return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
@@ -98,6 +99,14 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+              <Link to="/profile">
+                <IconButton
+                  aria-label="profile"
+                  className={classes.navbartext}
+                  >
+                     <AccountCircle />
+                </IconButton>
+              </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>
                   Logout
@@ -108,7 +117,7 @@ export default function NavBar() {
         </div>
       );
 
-    if (userData.user.type)
+    if (userData.user.type) 
       return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
@@ -138,6 +147,14 @@ export default function NavBar() {
                     Home
                   </Typography>
                 </Button>
+              </Link>
+              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
+                <IconButton
+                  aria-label="profile"
+                  className={classes.navbartext}
+                  >
+                    <AccountCircle />
+                </IconButton>
               </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>

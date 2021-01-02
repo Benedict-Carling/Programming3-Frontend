@@ -9,6 +9,7 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import GetTable from "./components/Table/getTable";
 import Logs from "./components/pages/Logs";
+import profile from "./components/pages/profile";
 
 
 import "./style.css";
@@ -38,6 +39,8 @@ export default function App() {
             <Route exact path="/data" component={Data} />
 
             <Route exact path="/logs" component={Logs} /> 
+
+            <Route exact path="/profile" component={profile} />
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
