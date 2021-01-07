@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
+import MUIDataTable from "mui-datatables";
 
 export default function GetTable(props) {
   const columns = [

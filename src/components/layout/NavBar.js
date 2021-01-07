@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "white",
-    flexGrow: 1, 
+    flexGrow: 1,
     textAlign: "left",
     padding: "10",
   },
@@ -75,9 +75,9 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
-              <Typography variant="h6" className={classes.title}>
-                Account Type: {userData.user.type}
-              </Typography>
+                <Typography className={classes.title}>
+                  Account Type: {userData.user.type}
+                </Typography>
               <Link style={navStyle} to="/home">
                 <Button>
                   <Typography className={classes.navbartext}>
@@ -99,12 +99,12 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
-              <Link to="/profile">
+              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
                 <IconButton
                   aria-label="profile"
                   className={classes.navbartext}
                   >
-                     <AccountCircle />
+                    <AccountCircle />
                 </IconButton>
               </Link>
               <Button onClick={logout}>
@@ -117,7 +117,7 @@ export default function NavBar() {
         </div>
       );
 
-    if (userData.user.type) 
+    if (userData.user.type === "editor")
       return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
@@ -136,7 +136,7 @@ export default function NavBar() {
                 </IconButton>
               </Link>
               <Typography variant="h6" className={classes.title}>
-                React2 - Resolve discrepancies
+                Review discrepancies
               </Typography>
               <Typography variant="h6" className={classes.title}>
                 Account Type: {userData.user.type}
@@ -145,6 +145,62 @@ export default function NavBar() {
                 <Button>
                   <Typography className={classes.navbartext}>
                     Home
+                  </Typography>
+                </Button>
+              </Link>
+              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
+                <IconButton
+                  aria-label="profile"
+                  className={classes.navbartext}
+                  >
+                    <AccountCircle />
+                </IconButton>
+              </Link>
+              <Button onClick={logout}>
+                <Typography className={classes.navbartext}>
+                  Logout
+                </Typography>
+              </Button>
+            </Toolbar>
+          </AppBar>
+        </div>
+      );
+
+      if (userData.user.type === "reviewer")
+      return (
+        <div className={classes.root}>
+          <AppBar position="static" color="transparent">
+            <Toolbar>
+              <Link to="/">
+                <IconButton
+                  edge="start"
+                  className={classes.menuButton}
+                  aria-label="menu"
+                >
+                  <img
+                    src={process.env.PUBLIC_URL + "icl.png"}
+                    height="50"
+                    alt="logo"
+                  />
+                </IconButton>
+              </Link>
+              <Typography variant="h6" className={classes.title}>
+                Review discrepancies
+              </Typography>
+              <Typography variant="h6" className={classes.title}>
+                Account Type: {userData.user.type}
+              </Typography>
+              <Link style={navStyle} to="/">
+                <Button>
+                  <Typography className={classes.navbartext}>
+                    Home
+                  </Typography>
+                </Button>
+              </Link>
+              <Link style={navStyle} to="/logs">
+                <Button>
+                  <Typography className={classes.navbartext}>
+                    Logs
                   </Typography>
                 </Button>
               </Link>
