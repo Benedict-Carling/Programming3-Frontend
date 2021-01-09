@@ -1,34 +1,52 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
+import Collapse from "@material-ui/core/Collapse";
+import IconButton from "@material-ui/core/IconButton";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 const useRowStyles = makeStyles({
   root: {
-    '& > *': {
-      borderBottom: 'unset',
+    "& > *": {
+      borderBottom: "unset",
     },
   },
 });
 
-function createData(U_PASSCODE, Id, Date, Flag, UserInt, AlgoInt, ExpInt, ExpCom, ImgPath) {
+function createData(
+  U_PASSCODE,
+  Id,
+  Date,
+  Flag,
+  UserInt,
+  AlgoInt,
+  ExpInt,
+  ExpCom,
+  ImgPath
+) {
   return {
-    U_PASSCODE, Id, Date, Flag, UserInt, AlgoInt, ExpInt, ExpCom, ImgPath,
+    U_PASSCODE,
+    Id,
+    Date,
+    Flag,
+    UserInt,
+    AlgoInt,
+    ExpInt,
+    ExpCom,
+    ImgPath,
     ChangeHistory: [
-      { date: '2020-01-05', Id: '11091700', amount: 3 },
-      { date: '2020-01-02', Id: 'Anonymous', amount: 1 },
+      { date: "2020-01-05", Id: "11091700", amount: 3 },
+      { date: "2020-01-02", Id: "Anonymous", amount: 1 },
     ],
   };
 }
@@ -42,7 +60,11 @@ function Row(props) {
     <React.Fragment>
       <TableRow className={classes.root}>
         <TableCell>
-          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+          <IconButton
+            aria-label="expand row"
+            size="small"
+            onClick={() => setOpen(!open)}
+          >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -107,13 +129,23 @@ Row.propTypes = {
         amount: PropTypes.number.isRequired,
         Id: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
-      }),
+      })
     ).isRequired,
   }).isRequired,
 };
 
 const rows = [
-  createData('AB12', 0, "2016-08-07", "Corrupt", "-", "-", "", "", "../../someImages"),
+  createData(
+    "AB12",
+    0,
+    "2016-08-07",
+    "Corrupt",
+    "-",
+    "-",
+    "",
+    "",
+    "../../someImages"
+  ),
   //createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
   //createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
   //createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),

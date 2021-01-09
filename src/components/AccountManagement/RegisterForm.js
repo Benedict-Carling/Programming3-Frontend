@@ -22,9 +22,6 @@ export default function RegisterForm(props) {
   const [openErrorMessage, setOpenErrorMessage] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState("");
   const [SuccessMessage, setSuccessMessage] = useState("");
-  
-
-
 
   const history = useHistory();
 
@@ -40,23 +37,18 @@ export default function RegisterForm(props) {
     console.log(passwordCheck);
     const newUser = { email, password, passwordCheck, userType };
     console.log(newUser);
-   
-   await Axios.post(
-    "http://localhost:5000/users/register",
-    newUser
-   )
-       
-    .then(response=> {
-      console.log(response);
-      setOpenSuccessMessage(true);
-      setSuccessMessage("Registration has been successful!")
-      
-    })
-    .catch(error=> {
-      setOpenErrorMessage(true);
-      setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
-    })
-    
+
+    await Axios.post("http://localhost:5000/users/register", newUser)
+
+      .then((response) => {
+        console.log(response);
+        setOpenSuccessMessage(true);
+        setSuccessMessage("Registration has been successful!");
+      })
+      .catch((error) => {
+        setOpenErrorMessage(true);
+        setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
+      });
   };
 
   function validateForm() {
@@ -68,10 +60,9 @@ export default function RegisterForm(props) {
       userType.length > 0
     );
   }
-  
+
   return (
     <div>
-      
       <form onSubmit={submit}>
         <label className="Register-email">
           <h1 htmlFor="register-email">Email:</h1>
@@ -149,13 +140,19 @@ export default function RegisterForm(props) {
           Register
         </Button>
       </form>
-    
-      <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
-        <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} Message={SuccessMessage}/>
-        <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
+
+      <Grid className="Alert" item xs={5} sm={5} md={7} lg={12}>
+        <SuccessAlert
+          setOpen={setOpenSuccessMessage}
+          open={openSuccessMessage}
+          Message={SuccessMessage}
+        />
+        <ErrorAlert
+          setOpen={setOpenErrorMessage}
+          open={openErrorMessage}
+          Error={ErrorMessage}
+        />
       </Grid>
     </div>
-
   );
-
 }

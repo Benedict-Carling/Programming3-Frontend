@@ -32,7 +32,11 @@ export default function HomeImage(props) {
 
   return (
     <div className={classes.responsiveImage}>
-      <img src={covidStats}className={classes.responsiveImage} alt="covidStats" />
+      <img
+        src={covidStats}
+        className={classes.responsiveImage}
+        alt="covidStats"
+      />
     </div>
   );
 }

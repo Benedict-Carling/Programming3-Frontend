@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import UserContext from "../../context/UserContext";
 import { useHistory } from "react-router-dom";
-import AccountCircle from '@material-ui/icons/AccountCircle';
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 import { Link } from "react-router-dom";
 
@@ -75,14 +75,12 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
-                <Typography className={classes.title}>
-                  Account Type: {userData.user.type}
-                </Typography>
+              <Typography className={classes.title}>
+                Account Type: {userData.user.type}
+              </Typography>
               <Link style={navStyle} to="/home">
                 <Button>
-                  <Typography className={classes.navbartext}>
-                    Home
-                  </Typography>
+                  <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
               <Link style={navStyle} to="/accountmanagement">
@@ -94,27 +92,23 @@ export default function NavBar() {
               </Link>
               <Link style={navStyle} to="/logs">
                 <Button>
-                  <Typography className={classes.navbartext}>
-                    Logs
-                  </Typography>
+                  <Typography className={classes.navbartext}>Logs</Typography>
                 </Button>
               </Link>
-              <Link style={navStyle} to="/profile"> 
-              <Button>
+              <Link style={navStyle} to="/profile">
+                <Button>
                   <Typography className={classes.navbartext}>
                     Profile
                   </Typography>
                 </Button>
               </Link>
               <Button onClick={logout}>
-                <Typography className={classes.navbartext}>
-                  Logout
-                </Typography>
+                <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
             </Toolbar>
           </AppBar>
         </div>
-      )
+      );
 
     if (userData.user.type === "editor")
       return (
@@ -142,29 +136,27 @@ export default function NavBar() {
               </Typography>
               <Link style={navStyle} to="/">
                 <Button>
-                  <Typography className={classes.navbartext}>
-                    Home
-                  </Typography>
+                  <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
-              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
-              <Button>
+              <Link style={navStyle} to="/profile">
+                {" "}
+                {/* icon that takes the user to their profile page */}
+                <Button>
                   <Typography className={classes.navbartext}>
                     Profile
                   </Typography>
                 </Button>
               </Link>
               <Button onClick={logout}>
-                <Typography className={classes.navbartext}>
-                  Logout
-                </Typography>
+                <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
             </Toolbar>
           </AppBar>
         </div>
       );
 
-      if (userData.user.type === "reviewer")
+    if (userData.user.type === "reviewer")
       return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
@@ -190,29 +182,25 @@ export default function NavBar() {
               </Typography>
               <Link style={navStyle} to="/">
                 <Button>
-                  <Typography className={classes.navbartext}>
-                    Home
-                  </Typography>
+                  <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
               <Link style={navStyle} to="/logs">
                 <Button>
-                  <Typography className={classes.navbartext}>
-                    Logs
-                  </Typography>
+                  <Typography className={classes.navbartext}>Logs</Typography>
                 </Button>
               </Link>
-              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
-              <Button>
+              <Link style={navStyle} to="/profile">
+                {" "}
+                {/* icon that takes the user to their profile page */}
+                <Button>
                   <Typography className={classes.navbartext}>
                     Profile
                   </Typography>
                 </Button>
               </Link>
               <Button onClick={logout}>
-                <Typography className={classes.navbartext}>
-                  Logout
-                </Typography>
+                <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
             </Toolbar>
           </AppBar>

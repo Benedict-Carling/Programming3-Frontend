@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 
 export default function Data() {
-  const [selectedU_PASSCODE,setU_PASSCODE] = useState("");
+  const [selectedU_PASSCODE, setU_PASSCODE] = useState("");
   const [selectedID, setSelectedID] = useState("");
   const [selectedFlag, setFlag] = useState("");
   const [expertComment, setExpertComment] = useState("");
@@ -28,7 +28,7 @@ export default function Data() {
           <SimpleTabs
             setU_PASSCODE={setU_PASSCODE}
             setSelectedID={setSelectedID}
-            setFlag = {setFlag}
+            setFlag={setFlag}
             buttonclicked={buttonclicked}
           />
         </Card>

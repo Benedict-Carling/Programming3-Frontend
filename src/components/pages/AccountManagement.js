@@ -1,7 +1,7 @@
 import React from "react";
 import Register from "../AccountManagement/Register";
 import DeleteUsers from "../AccountManagement/DeleteUsers";
-import {Tabs, Tab, AppBar} from "@material-ui/core";
+import { Tabs, Tab, AppBar } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
@@ -18,9 +18,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={0}>
-          <Typography>
-            {children}
-          </Typography>
+          <Typography>{children}</Typography>
         </Box>
       )}
     </div>
@@ -37,26 +35,20 @@ export default function AccountManagement(props) {
   return (
     <div>
       <AppBar position="static" color="primary">
-        <Tabs value={selectedTab} onChange={handleChange} >
+        <Tabs value={selectedTab} onChange={handleChange}>
+          <Tab label="Register New Account"></Tab>
 
-          <Tab label="Register New Account" >
-          </Tab>
-
-          <Tab label="Manage Accounts">
-          </Tab>
-
+          <Tab label="Manage Accounts"></Tab>
         </Tabs>
       </AppBar>
 
       <TabPanel value={selectedTab} index={0}>
-        <Register/>
+        <Register />
       </TabPanel>
 
       <TabPanel value={selectedTab} index={1}>
         <DeleteUsers />
       </TabPanel>
-
     </div>
   );
 }
-

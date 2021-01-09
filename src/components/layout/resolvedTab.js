@@ -61,11 +61,7 @@ export default function SimpleTabs(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="Select a tab"
-        >
+        <Tabs value={value} onChange={handleChange} aria-label="Select a tab">
           <Tab label="Unresolved Discrepancies" {...a11yProps(0)} />
           <Tab label="Resolved Discrepancies" {...a11yProps(1)} />
         </Tabs>
@@ -79,7 +75,7 @@ export default function SimpleTabs(props) {
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
-      <ResolvedTable
+        <ResolvedTable
           setSelectedID={props.setSelectedID}
           setFlag={props.setFlag}
           buttonclicked={props.buttonclicked}

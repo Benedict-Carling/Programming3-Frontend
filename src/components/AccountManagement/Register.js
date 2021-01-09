@@ -1,30 +1,25 @@
-
 import React from "react";
 import "./Register.css";
 import { Grid } from "@material-ui/core";
-import ImageDynamic from '../CovidStatsImg/ImageDynamic';
-import RegisterForm from './RegisterForm'
+import ImageDynamic from "../CovidStatsImg/ImageDynamic";
+import RegisterForm from "./RegisterForm";
 
 export default function Register() {
-
   return (
-    <div className= "Register">
-      <Grid container spacing={2} padding='5px' >
+    <div className="Register">
+      <Grid container spacing={2} padding="5px">
         <Grid item xs={12}>
-        <h1 className="Register-MainTitle">
-          Register a new account:
-        </h1>
+          <h1 className="Register-MainTitle">Register a new account:</h1>
         </Grid>
 
         <Grid item xs={12} md={5}>
-          <RegisterForm/>
+          <RegisterForm />
         </Grid>
 
         <Grid item xs={12} md={5}>
-          <ImageDynamic className="Image"/>
+          <ImageDynamic className="Image" />
         </Grid>
       </Grid>
-      
     </div>
   );
 }
