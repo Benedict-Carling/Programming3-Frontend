@@ -1,8 +1,12 @@
-import "../pages/profile.css";
 import React, { useState, useContext } from "react";
+import "../pages/profile.css";
 import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
+
+import UserContext from "../../context/UserContext";
+import Axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 
 
 export default function PasswordChange() {
@@ -14,16 +18,13 @@ export default function PasswordChange() {
 
     const { userData, setUserData } = useContext(UserContext); 
 
-const handleChange = (event) => {
-    setAccountType(event.target.value);
-  };
+
 
   const submit = async (e) => {
     e.preventDefault();
    
    await Axios.post(
-    "http://localhost:5000/users/changePassword",
-    newUser
+    "http://localhost:5000/users/changePassword"
    )
     .then(response=> {
       console.log(response);

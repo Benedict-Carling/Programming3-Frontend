@@ -4,13 +4,12 @@ import "./profile.css";
 import PasswordChange from "../AccountManagement/PasswordChange";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import UserContext from "../../context/UserContext";
-import Axios from 'axios';
+
 
 export default function Profile() {
-   
 
-    const { userData, setUserData } = useContext(UserContext); 
-
+const { userData, setUserData } = useContext(UserContext); 
+ 
 return(
     <div className="Profile">
         <Grid container spacing={2} padding='0px'  >
