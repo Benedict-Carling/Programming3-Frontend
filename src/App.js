@@ -24,20 +24,28 @@ export default function App() {
     <>
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
-          <NavBar />
-          <Switch>
-            <Route exact path="/" component={Login} />
+        {userData.token?
+        <>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Login} />
 
-            <Route exact path="/home" component={Home} />
+          <Route exact path="/home" component={Home} />
 
-            <Route exact path="/accountmanagement" component={AccountManagement}/>
-            
-            <Route exact path="/data" component={Data} />
+          <Route exact path="/accountmanagement" component={AccountManagement}/>
+          
+          <Route exact path="/data" component={Data} />
 
-            <Route exact path="/logs" component={Logs} /> 
+          <Route exact path="/logs" component={Logs} /> 
 
-            <Route exact path="/profile" component={profile} />
-          </Switch>
+          <Route exact path="/profile" component={profile} />
+        </Switch>
+        </>
+        :
+        <Switch>
+            <Route path="/" component={Login} />
+        </Switch>
+        }
         </UserContext.Provider>
       </BrowserRouter>
     </>
