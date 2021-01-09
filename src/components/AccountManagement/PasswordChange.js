@@ -15,6 +15,7 @@ export default function PasswordChange() {
     const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
     const [openErrorMessage, setOpenErrorMessage] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
+    const [SuccessMessage, setSuccessMessage] = useState("");
 
     const { userData, setUserData } = useContext(UserContext); 
 
@@ -22,13 +23,16 @@ export default function PasswordChange() {
 
   const submit = async (e) => {
     e.preventDefault();
+    const config = {
+        headers: { "x-auth-token": userData.token }
+    };
    
    await Axios.post(
-    "http://localhost:5000/users/changePassword"
-   )
+    "http://localhost:5000/users/changePassword", config)
     .then(response=> {
       console.log(response);
       setOpenSuccessMessage(true);
+      setSuccessMessage("The password has been changed successfully!")
     })
     .catch(error=> {
       setOpenErrorMessage(true);
@@ -55,7 +59,7 @@ return(
 
             <input
                 className="Textfield"
-                
+                onChange={(e) => setPassword(e.target.value)}
                 id="register-password"
                 type="password"
             />
@@ -66,7 +70,7 @@ return(
 
             <input
                 className="Textfield"
-                
+                onChange={(e) => setPasswordCheck(e.target.value)}
                 id="register-passwordCheck"
                 type="password"
                 placeholder="Verify password"
@@ -84,7 +88,7 @@ return(
              
             </form>
             <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
-                <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
+                <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} Message={SuccessMessage} />
                 <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
             </Grid>
             </div>
