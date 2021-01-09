@@ -26,9 +26,9 @@ export default function PasswordChange() {
     const config = {
         headers: { "x-auth-token": userData.token }
     };
-   
+    const newPassword = { password, passwordCheck };
    await Axios.post(
-    "http://localhost:5000/users/changePassword", config)
+    "http://localhost:5000/users/changePassword",newPassword,config)
     .then(response=> {
       console.log(response);
       setOpenSuccessMessage(true);
