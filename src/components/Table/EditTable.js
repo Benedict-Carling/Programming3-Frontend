@@ -19,7 +19,8 @@ export default function EditTable(props) {
     },
     formControl: {
       margin: theme.spacing(1),
-      minWidth: 120,
+      minWidth: 285,
+      paddingLeft: -50,
     },
   }));
   const { userData, setUserData } = useContext(UserContext);
@@ -123,7 +124,8 @@ export default function EditTable(props) {
       <TextField
         id="idofclicked"
         label="ID"
-        variant="filled"
+        variant="outlined"
+        fullWidth= '20ch' 
         value={props.selectedID}
         InputProps={{classes:labelClasses}}
       />
@@ -134,7 +136,8 @@ export default function EditTable(props) {
         label="Expert Comment"
         multiline
         rows={6}
-        variant="filled"
+        fullWidth= '20ch' 
+        variant="outlined"
       />
       
       <FormControl className={classes.formControl}>
@@ -147,7 +150,7 @@ export default function EditTable(props) {
           onOpen={handleOpen}
           onChange={handleChange}
           value={props.expertInterpretation}
-          variant="filled"
+          variant="outlined"
         >
           
           <MenuItem value={"Test: uR; Validity: -; IgG:-"}>Test: uR; Validity: -; IgG:-</MenuItem>
