@@ -99,13 +99,12 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
-              <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
-                <IconButton
-                  aria-label="profile"
-                  className={classes.navbartext}
-                  >
-                    <AccountCircle />
-                </IconButton>
+              <Link style={navStyle} to="/profile"> 
+              <Button>
+                  <Typography className={classes.navbartext}>
+                    Profile
+                  </Typography>
+                </Button>
               </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>
@@ -149,12 +148,11 @@ export default function NavBar() {
                 </Button>
               </Link>
               <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
-                <IconButton
-                  aria-label="profile"
-                  className={classes.navbartext}
-                  >
-                    <AccountCircle />
-                </IconButton>
+              <Button>
+                  <Typography className={classes.navbartext}>
+                    Profile
+                  </Typography>
+                </Button>
               </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>
@@ -205,12 +203,11 @@ export default function NavBar() {
                 </Button>
               </Link>
               <Link style={navStyle} to="/profile"> {/* icon that takes the user to their profile page */}
-                <IconButton
-                  aria-label="profile"
-                  className={classes.navbartext}
-                  >
-                    <AccountCircle />
-                </IconButton>
+              <Button>
+                  <Typography className={classes.navbartext}>
+                    Profile
+                  </Typography>
+                </Button>
               </Link>
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>
