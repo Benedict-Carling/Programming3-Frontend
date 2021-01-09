@@ -31,6 +31,7 @@ export default function GetTable(props) {
   function selectedRow(row) {
     props.setSelectedID(row.data.id);
     props.setFlag(row.data.Flag);
+    props.setU_PASSCODE(row.data.U_PASSCODE)
     console.log(row.data.id);
   }
 
