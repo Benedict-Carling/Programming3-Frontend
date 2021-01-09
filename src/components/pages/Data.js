@@ -10,6 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 
 export default function Data() {
+  const [selectedU_PASSCODE,setU_PASSCODE] = useState("");
   const [selectedID, setSelectedID] = useState("");
   const [selectedFlag, setFlag] = useState("");
   const [expertComment, setExpertComment] = useState("");
@@ -28,6 +29,7 @@ export default function Data() {
         <Card type="outlined">
           <SearchBar/>
           <SimpleTabs
+            setU_PASSCODE={setU_PASSCODE}
             setSelectedID={setSelectedID}
             setFlag = {setFlag}
             buttonclicked={buttonclicked}
@@ -39,6 +41,7 @@ export default function Data() {
         <EditTable
           selectedID={selectedID}
           selectedFlag={selectedFlag}
+          selectedU_PASSCODE={selectedU_PASSCODE}
           setExpertComment={setExpertComment}
           expertComment={expertComment}
           expertInterpretation={expertInterpretation}

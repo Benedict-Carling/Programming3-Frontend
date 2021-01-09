@@ -69,6 +69,7 @@ export default function EditTable(props) {
       
     const log = {
       InEmail: userData.user.email,
+      InU_PASSCODE: props.selectedU_PASSCODE,
       InType : userData.user.type,
       InDate : time,
       InId: props.selectedID,
