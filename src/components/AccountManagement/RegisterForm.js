@@ -21,6 +21,7 @@ export default function RegisterForm(props) {
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
   const [openErrorMessage, setOpenErrorMessage] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState("");
+  const [SuccessMessage, setSuccessMessage] = useState("");
   
 
 
@@ -48,6 +49,8 @@ export default function RegisterForm(props) {
     .then(response=> {
       console.log(response);
       setOpenSuccessMessage(true);
+      setSuccessMessage("Registration has been successful!")
+      
     })
     .catch(error=> {
       setOpenErrorMessage(true);
@@ -148,7 +151,7 @@ export default function RegisterForm(props) {
       </form>
     
       <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
-        <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} />
+        <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} Message={SuccessMessage}/>
         <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
       </Grid>
     </div>

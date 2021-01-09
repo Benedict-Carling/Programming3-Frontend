@@ -36,7 +36,7 @@ export default function SimpleAlerts(props) {
             </IconButton>
           }
         >
-          Registration has been successfull!
+          {props.Message}
         </Alert>
       </Collapse>
     </div>
