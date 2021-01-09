@@ -8,6 +8,7 @@ import { DataGrid } from "@material-ui/data-grid";
 export default function Logs() {
     const columns = [
         { field: "Email", headerName: "Email", width: 100 },
+        { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 200 },
         { field: "accountType", headerName: "Account Type", width: 150 },
         { field: "LogDate", headerName: "Date and Time", width: 400 },
         { field: "id", headerName: "Test ID", width: 200 },
@@ -30,6 +31,8 @@ export default function Logs() {
         const fetchData = async () => {
           const result = await Axios.get(`http://localhost:5000/log/table`);
           var body = result.data.map(process);
+          console.log(body)
+          console.log("hi")
           settable(body);
         };
         fetchData();
@@ -40,6 +43,7 @@ export default function Logs() {
     function process(entry) {
         return {
             Email : entry.Email,
+            U_PASSCODE: entry.U_PASSCODE,
             accountType : entry.accountType,
             LogDate : entry.LogDate,
             id : entry.testId,

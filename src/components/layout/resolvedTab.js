@@ -71,6 +71,7 @@ export default function SimpleTabs(props) {
       </AppBar>
       <TabPanel value={value} index={0}>
         <GetTable
+          setU_PASSCODE={props.setU_PASSCODE}
           setSelectedID={props.setSelectedID}
           setFlag={props.setFlag}
           buttonclicked={props.buttonclicked}
