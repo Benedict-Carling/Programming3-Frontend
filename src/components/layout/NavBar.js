@@ -50,7 +50,7 @@ export default function NavBar() {
   };
 
   try {
-    if (userData.user.type === "webmaster") {/* this is the functionaly that the webmaster account displays*/}
+    if (userData.user.type === "webmaster")
       return (
         <div className={classes.root}>
           <AppBar position="static" color="transparent">
@@ -115,7 +115,7 @@ export default function NavBar() {
             </Toolbar>
           </AppBar>
         </div>
-      );
+      )
 
     if (userData.user.type === "editor")
       return (
