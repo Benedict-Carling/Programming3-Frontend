@@ -33,7 +33,16 @@ function process(entry) {
 
 export default function DataTable() {
   const [state, setstate] = useState([]);
+  const [refreshTable, setRefreshTable] = useState(false);
+  const [numSelected, setNumSelected] = useState(0);
+  const [errMes, setErrMes] = useState('')
   const {userData, setUserData} = useContext(UserContext);
+
+  function selectedRowChange(selectedChange) {
+    console.log(selectedChange)
+    setNumSelected(selectedChange.rowIds.length);
+    console.log(numSelected);
+  }
 
   React.useEffect(() => {
     (async () => {
@@ -41,9 +50,16 @@ export default function DataTable() {
       var processed = loginRes.data.map(process);
       setstate(processed);
     })();
-  }, []);
+  }, [refreshTable]);
 
-  function DeleteFunc() {
+  const DeleteFunc = async (e) => {
+    e.preventDefault();
+    if (numSelected > 1) {
+      setErrMes('Please only delete one account at a time.');
+      return;
+    } else {
+      setErrMes('');
+    }
     const config = {
       headers: {"x-auth-token":userData.token}
     };
@@ -56,10 +72,11 @@ export default function DataTable() {
     
     console.log(UserDeleteId);
 
-    Axios.delete(`http://localhost:5000/users/delete/`, UserDeleteId, config)
+    await Axios.post(`http://localhost:5000/users/delete`, UserDeleteId, config)
     .then(res => {
       console.log(res);
       console.log(res.data);
+      setRefreshTable((C)=>!C)
     }); 
   };
 
@@ -72,6 +89,7 @@ export default function DataTable() {
         alignItems="center"
         >
           <Grid item>
+            {errMes}
             <Button variant="contained" color="secondary" type="submit" onClick={DeleteFunc}>
               DELETE
             </Button>
@@ -85,6 +103,7 @@ export default function DataTable() {
         checkboxSelection
         selecter
         onRowSelected = {selected => {selectedRow(selected)}}
+        onSelectionChange = {selectedChange => {selectedRowChange(selectedChange)}}
       />
     </div>
   );
