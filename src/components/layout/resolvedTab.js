@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import MainTable from "../../components/layout/CollapsibleTable";
 import GetTable from "../../components/Table/getTable";
+import ResolvedTable from "../../components/Table/resolvedTable";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -78,7 +79,11 @@ export default function SimpleTabs(props) {
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <MainTable />
+      <ResolvedTable
+          setSelectedID={props.setSelectedID}
+          setFlag={props.setFlag}
+          buttonclicked={props.buttonclicked}
+        />
       </TabPanel>
     </div>
   );

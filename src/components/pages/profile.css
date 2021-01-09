@@ -39,6 +39,7 @@
     height: 80vmin;
     padding-top: 10px;
     margin-top:-10px;
+   
   }
 
   .Profile-password {
@@ -66,4 +67,6 @@
     right: 1%;
     margin-bottom: 5%;
   }
+  
+
   

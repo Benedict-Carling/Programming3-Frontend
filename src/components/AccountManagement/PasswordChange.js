@@ -23,6 +23,7 @@ export default function PasswordChange() {
 
   const submit = async (e) => {
     e.preventDefault();
+    
     const config = {
         headers: { "x-auth-token": userData.token }
     };
@@ -33,11 +34,14 @@ export default function PasswordChange() {
       console.log(response);
       setOpenSuccessMessage(true);
       setSuccessMessage("The password has been changed successfully!")
+      setPasswordCheck("");
+      setPassword("");
     })
     .catch(error=> {
       setOpenErrorMessage(true);
       setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
     })
+    
     
   };
     function validateForm() {
@@ -62,6 +66,7 @@ return(
                 onChange={(e) => setPassword(e.target.value)}
                 id="register-password"
                 type="password"
+                
             />
 
             <label className="Profile-passwordCheck">
@@ -73,7 +78,8 @@ return(
                 onChange={(e) => setPasswordCheck(e.target.value)}
                 id="register-passwordCheck"
                 type="password"
-                placeholder="Verify password"
+                placeholder="Verify password" 
+                
             />
              <Button
                 onClick={submit}
@@ -85,12 +91,11 @@ return(
                 >
                 Change Password
              </Button>
-             
+              
+            <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} Message={SuccessMessage} />
+            <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
             </form>
-            <Grid className="Alert" item xs={5} sm ={5} md={7} lg={12} >
-                <SuccessAlert setOpen={setOpenSuccessMessage} open={openSuccessMessage} Message={SuccessMessage} />
-                <ErrorAlert setOpen={setOpenErrorMessage} open={openErrorMessage} Error ={ErrorMessage} />
-            </Grid>
+           
             </div>
 
 );
