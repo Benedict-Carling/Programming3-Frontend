@@ -15,7 +15,7 @@ export default function LoginForm() {
     const [ErrorMessage, setErrorMessage] = useState("");
     const [openErrorMessage, setOpenErrorMessage] = useState(false);
 
-    const { setUserData } = useContext(UserContext);
+    const { setUserData } = useContext(UserContext) || '';
     const history = useHistory();
 
     const submit = async (e) => {
