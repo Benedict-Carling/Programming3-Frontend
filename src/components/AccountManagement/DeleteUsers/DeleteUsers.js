@@ -6,14 +6,17 @@ import { Button } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import UserContext from "../../../context/UserContext";
 
+// Structure of the User's data
 const columns = [
   { field: "id", headerName: "ID", width: 200 },
   { field: "email", headerName: "Email", width: 200 },
   { field: "accountType", headerName: "Account Type", width: 200 },
 ];
 
+// Global variable of the User selected
 let selectedArray = [];
 
+// Function to confirm the selected row
 function selectedRow(row) {
   selectedArray = row;
   console.log(row);
@@ -23,6 +26,7 @@ function selectedRow(row) {
   return { selectedArray };
 }
 
+// Function to hide unnecessary attributes of entry 
 function process(entry) {
   return {
     id: entry._id,
@@ -31,19 +35,25 @@ function process(entry) {
   };
 }
 
+/* Function to render the Delete Users tab in the Account Management page 
+*/
 export default function DataTable() {
+
+  // Variables that may change throughout the function process
   const [state, setstate] = useState([]);
   const [refreshTable, setRefreshTable] = useState(false);
   const [numSelected, setNumSelected] = useState(0);
   const [errMes, setErrMes] = useState("");
   const { userData, setUserData } = useContext(UserContext);
 
+  // Function to obtain the length of selectedChange
   function selectedRowChange(selectedChange) {
     console.log(selectedChange);
     setNumSelected(selectedChange.rowIds.length);
     console.log(numSelected);
   }
 
+  // Function to get the data from the Users database
   React.useEffect(() => {
     (async () => {
       const loginRes = await Axios.get("http://localhost:5000/users/allusers");
@@ -52,6 +62,7 @@ export default function DataTable() {
     })();
   }, [refreshTable]);
 
+  // Function to delete a user at a time from the users database
   const DeleteFunc = async (e) => {
     e.preventDefault();
     if (numSelected > 1) {

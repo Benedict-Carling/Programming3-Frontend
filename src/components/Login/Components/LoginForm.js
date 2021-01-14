@@ -8,7 +8,12 @@ import PasswordButton from "./PasswordButton";
 import Button from "@material-ui/core/Button";
 import ErrorAlert from "../../AccountManagement/Register/Components/ErrorAlert.js";
 
+/* Function to authentify the input for logging in, in the Login page, and to display 
+an error message if the credentials are not valid
+*/
 export default function LoginForm() {
+
+  // Variables that may change through the log in process
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [ErrorMessage, setErrorMessage] = useState("");
@@ -17,6 +22,7 @@ export default function LoginForm() {
   const { setUserData } = useContext(UserContext) || "";
   const history = useHistory();
 
+  // Function to authentify there is an existing account with the email and password provided
   const submit = async (e) => {
     e.preventDefault();
     const logInUser = { email, password };
@@ -32,7 +38,7 @@ export default function LoginForm() {
       history.push("/home");
     } catch (error) {
       setOpenErrorMessage(true);
-      setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
+      setErrorMessage(error.response.data.msg); // error message from the post request made in the backend
     }
   };
 
@@ -80,6 +86,7 @@ export default function LoginForm() {
       <Grid item xs={5} md={5}>
         <PasswordButton />
       </Grid>
+
       <Grid className="Alert" item xs={5} sm={5} md={9} lg={12}>
         <ErrorAlert
           setOpen={setOpenErrorMessage}

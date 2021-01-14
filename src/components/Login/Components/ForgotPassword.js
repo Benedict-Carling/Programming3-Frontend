@@ -7,6 +7,8 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Emailsender from "./Emailsender";
 
+/* Function to render components after clicking the Forgot Password button in the Login page.
+*/
 export default function ForgotPassword(props) {
   return (
     <div>
@@ -15,7 +17,10 @@ export default function ForgotPassword(props) {
         onClose={props.handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Forgot your password</DialogTitle>
+        <DialogTitle id="form-dialog-title">
+          Forgot your password
+        </DialogTitle>
+
         <DialogContent>
           <DialogContentText>
             If you have forgotten your password, email your supervisor. By
