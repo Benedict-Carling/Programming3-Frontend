@@ -4,7 +4,7 @@ React.js based website
 
 ## UnitTests
 
-Instead on Travis CI we used the local github workflows pipeline to automatically test unit test on each pull request into the main branch aswell as the main branch itself, you can see below the status of the current main branch.
+Instead of Travis CI we used the local github workflows pipeline to automatically test unit test on each pull request into the main branch as well as the main branch itself, you can see below the status of the current main branch.
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Benedict-Carling/Programming3-Frontend/React%20Unittests)
 
