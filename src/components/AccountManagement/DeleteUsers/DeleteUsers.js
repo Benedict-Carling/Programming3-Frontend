@@ -4,7 +4,7 @@ import { DataGrid } from "@material-ui/data-grid";
 import Axios from "axios";
 import { Button } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
-import UserContext from "../../context/UserContext";
+import UserContext from "../../../context/UserContext";
 
 const columns = [
   { field: "id", headerName: "ID", width: 200 },
