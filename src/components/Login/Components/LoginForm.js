@@ -6,7 +6,7 @@ import "../auth/Login.css";
 import { Grid } from "@material-ui/core";
 import PasswordButton from "./PasswordButton";
 import Button from "@material-ui/core/Button";
-import ErrorAlert from "../../AccountManagement/ErrorAlert.js";
+import ErrorAlert from "../../AccountManagement/Register/Components/ErrorAlert.js";
 import { ApiEndpoint } from "../../../index";
 
 export default function LoginForm() {

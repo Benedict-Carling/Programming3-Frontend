@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import UserContext from "../../context/UserContext";
+import UserContext from "../../../../context/UserContext";
 import Axios from "axios";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
 import { Grid } from "@material-ui/core";
-import { ApiEndpoint } from "../../index";
+import { ApiEndpoint } from "../../../../index";
 /* Function that allows a new user to be registered.
 A post request is made to the backEnd and alerts to indicate if this was successful are also implemented.
 */

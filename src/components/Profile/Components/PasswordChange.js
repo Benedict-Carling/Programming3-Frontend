@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import "../pages/profile.css";
 import Button from "@material-ui/core/Button";
-import SuccessAlert from "../../AccountManagement/SuccessAlert";
-import ErrorAlert from "../../AccountManagement/ErrorAlert";
+import SuccessAlert from "../../AccountManagement/Register/Components/SuccessAlert";
+import ErrorAlert from "../../AccountManagement/Register/Components/ErrorAlert";
 import UserContext from "../../../context/UserContext";
 import Axios from "axios";
 import { ApiEndpoint } from "../../../index";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import UserContext from "./context/UserContext";
-import AccountManagement from "./components/pages/AccountManagement";
+import AccountManagement from "./components/AccountManagement/AccountManagement";
 import NavBar from "./components/layout/NavBar";
 import Home from "./components/Home/home";
 import Data from "./components/Data/Data";
