@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import EditTable from "../Table/EditTable";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
-
+/* Function that fetches the data from the logs database in MongoDB using a get request to the backEnd
+ and returns this data in a table
+*/
 export default function Logs() {
-  const columns = [
+  const columns = [ // all the fields contained in the table rendered
     { field: "Email", headerName: "Email", width: 100 },
     { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 200 },
     { field: "accountType", headerName: "Account Type", width: 150 },
@@ -20,24 +22,22 @@ export default function Logs() {
 
   const [table, settable] = useState([]);
 
-  function selectedRow(row) {
+  function selectedRow(row) { // registers the selection of a row
     console.log(row);
-    console.log("hi");
   }
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios.get(`http://localhost:5000/log/table`);
+      const result = await Axios.get(`http://localhost:5000/log/table`); // get request to the backEnd
       var body = result.data.map(process);
       console.log(body);
-      console.log("hi");
       settable(body);
     };
-    fetchData();
+    fetchData(); // fetches the data
   }, []);
 
   function process(entry) {
-    return {
+    return { // returns the account information of the expert and information of the data fields that were changes
       Email: entry.Email,
       U_PASSCODE: entry.U_PASSCODE,
       accountType: entry.accountType,

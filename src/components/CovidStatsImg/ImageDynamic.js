@@ -1,7 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import covidStats from "./covidStats.png";
-
+/* function that contains an icon used in various pages
+it uses const useStyles to define its alignment and size automatically depending on the screen size
+*/
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "left",

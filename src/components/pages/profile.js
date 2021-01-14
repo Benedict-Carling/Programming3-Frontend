@@ -4,7 +4,9 @@ import "./profile.css";
 import PasswordChange from "../AccountManagement/PasswordChange";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import UserContext from "../../context/UserContext";
-
+/* function that renders the profile page
+it includes the change password functionality from PasswordChange.js
+*/
 export default function Profile() {
   const { userData, setUserData } = useContext(UserContext);
 
@@ -17,8 +19,9 @@ export default function Profile() {
           </header>
         </Grid>
         <Grid item xs={12}>
-          <header className="Profile-Info">
-            <h1>EMAIL: {userData.user.email}</h1>
+          <header className="Profile-Info" >
+            {/*accesses the account information of current user*/}
+            <h1>EMAIL: {userData.user.email}</h1> 
             <h1>ACCOUNT TYPE: {userData.user.type}</h1>
           </header>
         </Grid>
