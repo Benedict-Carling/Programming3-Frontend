@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import UserContext from "../../context/UserContext";
+import UserContext from "../../../context/UserContext";
 import Axios from "axios";
 import "../auth/Login.css";
 import { Grid } from "@material-ui/core";
 import PasswordButton from "./PasswordButton";
 import Button from "@material-ui/core/Button";
-import ErrorAlert from "../AccountManagement/ErrorAlert.js";
-import { ApiEndpoint } from "../../index";
+import ErrorAlert from "../../AccountManagement/ErrorAlert.js";
+import { ApiEndpoint } from "../../../index";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
