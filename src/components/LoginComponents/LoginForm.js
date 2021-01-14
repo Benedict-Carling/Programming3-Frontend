@@ -6,7 +6,7 @@ import "../auth/Login.css";
 import { Grid } from "@material-ui/core";
 import PasswordButton from "./PasswordButton";
 import Button from "@material-ui/core/Button";
-import ErrorAlert from "../AccountManagement/ErrorAlert.js";
+import ErrorAlert from "../AccountManagement/Register/Components/ErrorAlert.js";
 
 /* Function to authentify the input for logging in, in the Login page, and to display 
 an error message if the credentials are not valid
