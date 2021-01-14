@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import EditTable from "../Table/EditTable";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
 import { ApiEndpoint } from "../../index";
