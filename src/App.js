@@ -6,9 +6,7 @@ import NavBar from "./components/layout/NavBar";
 import Home from "./components/pages/home";
 import Data from "./components/pages/Data";
 import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
-import GetTable from "./components/Table/getTable";
-import Logs from "./components/pages/Logs";
+import Logs from "./components/Logs/Logs";
 import profile from "./components/pages/profile";
 
 import "./style.css";
