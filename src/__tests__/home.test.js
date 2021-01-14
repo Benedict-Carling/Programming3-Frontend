@@ -1,4 +1,4 @@
-import Home from "../components/Home";
+import Home from "../components/Home/home";
 import React from "react";
 import { shallow } from "enzyme";
 
