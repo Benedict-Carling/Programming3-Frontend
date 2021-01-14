@@ -7,7 +7,7 @@ import Home from "./components/Home/home";
 import Data from "./components/pages/Data";
 import Login from "./components/auth/Login";
 import Logs from "./components/Logs/Logs";
-import profile from "./components/pages/profile";
+import profile from "./components/Profile/profile";
 
 import "./style.css";
 

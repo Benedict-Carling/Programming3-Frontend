@@ -1,13 +1,12 @@
 import React, { useState, useContext } from "react";
 import "../pages/profile.css";
 import Button from "@material-ui/core/Button";
-import SuccessAlert from "./SuccessAlert";
-import ErrorAlert from "./ErrorAlert";
-
-import UserContext from "../../context/UserContext";
+import SuccessAlert from "../../AccountManagement/SuccessAlert";
+import ErrorAlert from "../../AccountManagement/ErrorAlert";
+import UserContext from "../../../context/UserContext";
 import Axios from "axios";
-import Grid from "@material-ui/core/Grid";
-import { ApiEndpoint } from "../../index";
+import { ApiEndpoint } from "../../../index";
+
 /* This function allows the user to change their current passwords.
 It also implements alerts to indicate if the process was successful.
 It does this by making a post request to the backEnd 
