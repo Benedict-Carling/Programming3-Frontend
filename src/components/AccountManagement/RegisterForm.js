@@ -11,6 +11,7 @@ import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
 import { Grid } from "@material-ui/core";
+import { ApiEndpoint } from "../../index";
 /* Function that allows a new user to be registered.
 A post request is made to the backEnd and alerts to indicate if this was successful are also implemented.
 */
@@ -27,7 +28,8 @@ export default function RegisterForm(props) {
 
   const history = useHistory();
 
-  const handleChange = (event) => { // sets the account type of the new user
+  const handleChange = (event) => {
+    // sets the account type of the new user
     setAccountType(event.target.value);
   };
 
@@ -40,7 +42,7 @@ export default function RegisterForm(props) {
     const newUser = { email, password, passwordCheck, userType }; // data needed for the new user
     console.log(newUser);
 
-    await Axios.post("http://localhost:5000/users/register", newUser) // post request to the backEnd
+    await Axios.post(ApiEndpoint + "users/register", newUser) // post request to the backEnd
 
       .then((response) => {
         console.log(response);
@@ -105,7 +107,7 @@ export default function RegisterForm(props) {
             <h1 htmlFor="register-userType">Type of Account:</h1>
           </label>
 
-          <RadioGroup 
+          <RadioGroup
             aria-label="Type of account"
             name="account"
             value={userType}

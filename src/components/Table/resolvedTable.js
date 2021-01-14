@@ -3,6 +3,7 @@ import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
+import { ApiEndpoint } from "../..";
 
 export default function ResolvedTable(props) {
   const [responsive, setResponsive] = useState("standard");
@@ -151,7 +152,7 @@ export default function ResolvedTable(props) {
   }
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios.get(`http://localhost:5000/data/table`);
+      const result = await Axios.get(ApiEndpoint + `data/table`);
       var body = result.data.map(process);
       body.forEach((element) => {
         element.id = Number.parseInt(element.id);

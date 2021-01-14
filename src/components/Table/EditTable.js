@@ -10,6 +10,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { makeStyles } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
+import { ApiEndpoint } from "../../index";
 
 export default function EditTable(props) {
   const useStyles = makeStyles((theme) => ({
@@ -52,10 +53,7 @@ export default function EditTable(props) {
       InputComment: props.expertComment,
       InputValidation: props.expertInterpretation,
     };
-    const resdb = await Axios.post(
-      "http://localhost:5000/data/add-comment",
-      jsonobj
-    );
+    const resdb = await Axios.post(ApiEndpoint + "data/add-comment", jsonobj);
     if (resdb.status === 200) props.setButtonclicked(true);
     console.log("response", resdb);
     var date = new Date().getDate(); //Current Date
@@ -78,7 +76,7 @@ export default function EditTable(props) {
     };
     console.log(log);
 
-    const reslog = await Axios.post("http://localhost:5000/log/add-log", log);
+    const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
   };
 
   const darkergrey = grey[500];

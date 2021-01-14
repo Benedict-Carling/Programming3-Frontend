@@ -7,6 +7,7 @@ import ErrorAlert from "./ErrorAlert";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import Grid from "@material-ui/core/Grid";
+import { ApiEndpoint } from "../../index";
 /* This function allows the user to change their current passwords.
 It also implements alerts to indicate if the process was successful.
 It does this by making a post request to the backEnd 
@@ -28,20 +29,22 @@ export default function PasswordChange() {
       headers: { "x-auth-token": userData.token }, // gets token of current user
     };
     const newPassword = { password, passwordCheck };
-    await Axios.post( // makes post request to BackeEnd
-      "http://localhost:5000/users/changePassword",
+    await Axios.post(
+      // makes post request to BackeEnd
+      ApiEndpoint + "users/changePassword",
       newPassword,
       config
     )
-      .then((response) => { // if successful prints success alert
+      .then((response) => {
+        // if successful prints success alert
         console.log(response);
         setOpenSuccessMessage(true);
         setSuccessMessage("The password has been changed successfully!");
-        setPasswordCheck(""); 
+        setPasswordCheck("");
         setPassword("");
       })
       .catch((error) => {
-        setOpenErrorMessage(true); 
+        setOpenErrorMessage(true);
         setErrorMessage(error.response.data.msg); // we get the error message from the post request made in the backend
       });
   };
@@ -89,12 +92,12 @@ export default function PasswordChange() {
         <SuccessAlert
           setOpen={setOpenSuccessMessage}
           open={openSuccessMessage}
-          Message={SuccessMessage}  // from SuccessAlert.js
+          Message={SuccessMessage} // from SuccessAlert.js
         />
         <ErrorAlert
           setOpen={setOpenErrorMessage}
           open={openErrorMessage}
-          Error={ErrorMessage}  // from ErrorAlert.js
+          Error={ErrorMessage} // from ErrorAlert.js
         />
       </form>
     </div>

@@ -7,6 +7,7 @@ import { Grid } from "@material-ui/core";
 import PasswordButton from "./PasswordButton";
 import Button from "@material-ui/core/Button";
 import ErrorAlert from "../AccountManagement/ErrorAlert.js";
+import { ApiEndpoint } from "../../index";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -21,10 +22,7 @@ export default function LoginForm() {
     e.preventDefault();
     const logInUser = { email, password };
     try {
-      const loginRes = await Axios.post(
-        "http://localhost:5000/users/login",
-        logInUser
-      );
+      const loginRes = await Axios.post(ApiEndpoint + "users/login", logInUser);
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,

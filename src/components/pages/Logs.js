@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import EditTable from "../Table/EditTable";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
+import { ApiEndpoint } from "../../index";
 /* Function that fetches the data from the logs database in MongoDB using a get request to the backEnd
  and returns this data in a table
 */
 export default function Logs() {
-  const columns = [ // all the fields contained in the table rendered
+  const columns = [
+    // all the fields contained in the table rendered
     { field: "Email", headerName: "Email", width: 100 },
     { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 200 },
     { field: "accountType", headerName: "Account Type", width: 150 },
@@ -22,13 +24,14 @@ export default function Logs() {
 
   const [table, settable] = useState([]);
 
-  function selectedRow(row) { // registers the selection of a row
+  function selectedRow(row) {
+    // registers the selection of a row
     console.log(row);
   }
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios.get(`http://localhost:5000/log/table`); // get request to the backEnd
+      const result = await Axios.get(ApiEndpoint + `log/table`); // get request to the backEnd
       var body = result.data.map(process);
       console.log(body);
       settable(body);
@@ -37,7 +40,8 @@ export default function Logs() {
   }, []);
 
   function process(entry) {
-    return { // returns the account information of the expert and information of the data fields that were changes
+    return {
+      // returns the account information of the expert and information of the data fields that were changes
       Email: entry.Email,
       U_PASSCODE: entry.U_PASSCODE,
       accountType: entry.accountType,

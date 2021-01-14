@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
+import { ApiEndpoint } from "../../index";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -14,8 +15,8 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     const newUser = { email, password, passwordCheck };
-    await Axios.post("http://localhost:5000/users/register", newUser);
-    const loginRes = await Axios.post("http://localhost:5000/users/login", {
+    await Axios.post(ApiEndpoint + "users/register", newUser);
+    const loginRes = await Axios.post(ApiEndpoint + "users/login", {
       email,
       password,
     });

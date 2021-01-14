@@ -5,6 +5,7 @@ import Axios from "axios";
 import { Button } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import UserContext from "../../context/UserContext";
+import { ApiEndpoint } from "../../index";
 
 const columns = [
   { field: "id", headerName: "ID", width: 200 },
@@ -46,7 +47,7 @@ export default function DataTable() {
 
   React.useEffect(() => {
     (async () => {
-      const loginRes = await Axios.get("http://localhost:5000/users/allusers");
+      const loginRes = await Axios.get(ApiEndpoint + "users/allusers");
       var processed = loginRes.data.map(process);
       setstate(processed);
     })();
@@ -72,15 +73,13 @@ export default function DataTable() {
 
     console.log(UserDeleteId);
 
-    await Axios.post(
-      `http://localhost:5000/users/delete`,
-      UserDeleteId,
-      config
-    ).then((res) => {
-      console.log(res);
-      console.log(res.data);
-      setRefreshTable((C) => !C);
-    });
+    await Axios.post(ApiEndpoint + `users/delete`, UserDeleteId, config).then(
+      (res) => {
+        console.log(res);
+        console.log(res.data);
+        setRefreshTable((C) => !C);
+      }
+    );
   };
 
   return (
