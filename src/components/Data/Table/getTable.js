@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { DataGrid } from "@material-ui/data-grid";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
-import { ApiEndpoint } from "../..";
+import { ApiEndpoint } from "../../..";
 
-export default function ResolvedTable(props) {
+export default function GetTable(props) {
   const [responsive, setResponsive] = useState("standard");
   const [tableBodyHeight, setTableBodyHeight] = useState("400px");
 
@@ -160,7 +159,7 @@ export default function ResolvedTable(props) {
       body.sort(function (a, b) {
         return a.id - b.id;
       });
-      body = body.filter((element) => element.ExpertInterpretation !== "");
+      body = body.filter((element) => element.ExpertInterpretation === "");
       settable(body);
     };
     fetchData();
