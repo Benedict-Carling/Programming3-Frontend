@@ -3,7 +3,9 @@ import "./Register.css";
 import { Grid } from "@material-ui/core";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import RegisterForm from "./RegisterForm";
-
+/* Function that renders the registration page
+It includes RegisterForm.js that contains all the functionality
+*/
 export default function Register() {
   return (
     <div className="Register">

@@ -11,7 +11,9 @@ import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
 import { Grid } from "@material-ui/core";
-
+/* Function that allows a new user to be registered.
+A post request is made to the backEnd and alerts to indicate if this was successful are also implemented.
+*/
 export default function RegisterForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +27,7 @@ export default function RegisterForm(props) {
 
   const history = useHistory();
 
-  const handleChange = (event) => {
+  const handleChange = (event) => { // sets the account type of the new user
     setAccountType(event.target.value);
   };
 
@@ -35,14 +37,14 @@ export default function RegisterForm(props) {
     console.log(email);
     console.log(password);
     console.log(passwordCheck);
-    const newUser = { email, password, passwordCheck, userType };
+    const newUser = { email, password, passwordCheck, userType }; // data needed for the new user
     console.log(newUser);
 
-    await Axios.post("http://localhost:5000/users/register", newUser)
+    await Axios.post("http://localhost:5000/users/register", newUser) // post request to the backEnd
 
       .then((response) => {
         console.log(response);
-        setOpenSuccessMessage(true);
+        setOpenSuccessMessage(true); // if successful it enables the success alert
         setSuccessMessage("Registration has been successful!");
       })
       .catch((error) => {
@@ -70,7 +72,7 @@ export default function RegisterForm(props) {
 
         <input
           className="Textfield"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)} // when submitted the value given is asigned to the email variable
           id="register-email"
           type="email"
         />
@@ -81,7 +83,7 @@ export default function RegisterForm(props) {
 
         <input
           className="Textfield"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)} // when submitted the value given is asigned to the password variable
           id="register-password"
           type="password"
         />
@@ -92,7 +94,7 @@ export default function RegisterForm(props) {
 
         <input
           className="Textfield"
-          onChange={(e) => setPasswordCheck(e.target.value)}
+          onChange={(e) => setPasswordCheck(e.target.value)} // when submitted the value given is asigned to the passwordCheck variable
           id="register-passwordCheck"
           type="password"
           placeholder="Verify password"
@@ -103,11 +105,11 @@ export default function RegisterForm(props) {
             <h1 htmlFor="register-userType">Type of Account:</h1>
           </label>
 
-          <RadioGroup
+          <RadioGroup 
             aria-label="Type of account"
             name="account"
             value={userType}
-            onChange={handleChange}
+            onChange={handleChange} // calls the constant above that sets the account type of the new user
           >
             <FormControlLabel
               value="webmaster"
@@ -130,7 +132,7 @@ export default function RegisterForm(props) {
         </FormControl>
 
         <Button
-          onClick={submit}
+          onClick={submit} // submits all the variables
           variant="contained"
           color="secondary"
           type="submit"
