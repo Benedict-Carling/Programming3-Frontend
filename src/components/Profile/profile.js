@@ -1,7 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import React, { useState, useContext } from "react";
 import "./profile.css";
-import PasswordChange from "../AccountManagement/PasswordChange";
+import PasswordChange from "./Components/PasswordChange";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import UserContext from "../../context/UserContext";
 /* function that renders the profile page
