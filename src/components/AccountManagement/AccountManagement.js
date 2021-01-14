@@ -1,5 +1,5 @@
 import React from "react";
-import Register from "../AccountManagement/Register";
+import Register from "./Register/Register";
 import DeleteUsers from "../AccountManagement/DeleteUsers";
 import { Tabs, Tab, AppBar } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
