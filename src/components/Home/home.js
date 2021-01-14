@@ -7,6 +7,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
+
 /* Function that renders the home page
 It includes links for the different rounds of the react study
 (as proof of concept right now there is only one).
@@ -17,7 +18,9 @@ export default function Home() {
       <Grid container spacing={2} padding="0px">
         <Grid item xs={12} style={{ paddingTop: 0, paddingBottom: 0 }}>
           <header className="Home-MainTitle">
-            <h1>REACT 2</h1>
+            <h1>
+              REACT 2
+            </h1>
           </header>
         </Grid>
 
@@ -53,6 +56,7 @@ export default function Home() {
             </ListItem>
           </List>
         </Grid>
+        
         <Grid item xs={12} sm={5}>
           <ImageDynamic />
         </Grid>
