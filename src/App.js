@@ -4,7 +4,7 @@ import UserContext from "./context/UserContext";
 import AccountManagement from "./components/pages/AccountManagement";
 import NavBar from "./components/layout/NavBar";
 import Home from "./components/Home/home";
-import Data from "./components/pages/Data";
+import Data from "./components/Data/Data";
 import Login from "./components/Login/Login";
 import Logs from "./components/Logs/Logs";
 import profile from "./components/Profile/profile";
