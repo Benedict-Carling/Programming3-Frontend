@@ -14,4 +14,3 @@ describe("Home Component", () => {
     ).toBe(true);
   });
 });
-

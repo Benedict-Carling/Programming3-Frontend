@@ -1,8 +1,8 @@
 import React from "react";
 import "./Register.css";
 import { Grid } from "@material-ui/core";
-import ImageDynamic from "../../CovidStatsImg/ImageDynamic";
-import RegisterForm from "./Components/RegisterForm";
+import ImageDynamic from "../CovidStatsImg/ImageDynamic";
+import RegisterForm from "./RegisterForm";
 
 export default function Register() {
   return (

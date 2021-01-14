@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import SimpleTabs from "./resolvedTab";
-import EditTable from "./Table/EditTable";
+import SimpleTabs from "../../components/layout/resolvedTab";
+
+import MainTable from "../../components/layout/CollapsibleTable";
+
+import EditTable from "../Table/EditTable";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 
@@ -30,11 +33,8 @@ export default function Data() {
           />
         </Card>
       </Grid>
-
       <Grid item xs={12} sm={3}>
-        <Card type="outlined">
-        </Card>
-
+        <Card type="outlined"></Card>
         <EditTable
           selectedID={selectedID}
           selectedFlag={selectedFlag}
@@ -45,9 +45,7 @@ export default function Data() {
           setExpertInterpretation={setExpertInterpretation}
           setButtonclicked={setButtonclicked}
         />
-
       </Grid>
     </Grid>
   );
 }
-

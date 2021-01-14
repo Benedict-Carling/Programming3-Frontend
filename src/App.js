@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import UserContext from "./context/UserContext";
-import AccountManagement from "./components/AccountManagement/AccountManagement";
+import AccountManagement from "./components/pages/AccountManagement";
 import NavBar from "./components/layout/NavBar";
-import Home from "./components/Home/home";
-import Data from "./components/Data/Data";
-import Login from "./components/Login/Login";
-import Logs from "./components/Logs/Logs";
-import profile from "./components/Profile/profile";
+import Home from "./components/pages/home";
+import Data from "./components/pages/Data";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import GetTable from "./components/Table/getTable";
+import Logs from "./components/pages/Logs";
+import profile from "./components/pages/profile";
 
 import "./style.css";
 

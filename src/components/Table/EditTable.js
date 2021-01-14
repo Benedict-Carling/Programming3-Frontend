@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import UserContext from "../../../context/UserContext";
+import UserContext from "../../context/UserContext";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
@@ -115,7 +115,6 @@ export default function EditTable(props) {
           />
         </TransformComponent>
       </TransformWrapper>
-
       <TextField
         id="idofclicked"
         label="ID"
@@ -124,7 +123,6 @@ export default function EditTable(props) {
         value={props.selectedID}
         InputProps={{ classes: labelClasses }}
       />
-
       <TextField
         onChange={(e) => props.setExpertComment(e.target.value)}
         value={props.expertComment}
@@ -140,7 +138,6 @@ export default function EditTable(props) {
         <InputLabel id="demo-controlled-open-select-label">
           Expert interpretation
         </InputLabel>
-
         <Select
           labelId="Expert Interpretation"
           id="userinter"
@@ -151,23 +148,18 @@ export default function EditTable(props) {
           value={props.expertInterpretation}
           variant="outlined"
         >
-
           <MenuItem value={"Test: uR; Validity: -; IgG:-"}>
             Test: uR; Validity: -; IgG:-
           </MenuItem>
-
           <MenuItem value={"Test: R; Validity: I; IgG:-"}>
             Test: R; Validity: I; IgG:-
           </MenuItem>
-
           <MenuItem value={"Test: R; Validity: V; IgG: N"}>
             Test: R; Validity: V; IgG: N
           </MenuItem>
-
           <MenuItem value={"Test: R; Validity: V; IgG: P"}>
             Test: R; Validity: V; IgG: P
           </MenuItem>
-
         </Select>
       </FormControl>
 
@@ -177,4 +169,3 @@ export default function EditTable(props) {
     </div>
   );
 }
-

@@ -1,0 +1,72 @@
+.Profile{
+    background-color: #B5D4E1;
+    height: auto;
+}
+.Profile-MainTitle{
+  height: 14vmin;
+  font-size: calc(5px + 4vmin);
+  color: #2D3E4E;
+  margin-left: 50px;
+  margin-top: -50px;
+}
+.Profile-Info{
+    align-items: left;
+    justify-content: left;
+    font-size: calc(3px + 1vmin);
+    color: #2D3E4E;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    max-width: 500px;
+    height: 8vmin;
+    margin-top: -10px;
+}
+.Profile-header{
+     align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 5vmin);
+  color: #2D3E4E;
+  
+  margin-bottom: -15px;
+  max-width: 500px;
+  height: 8vmin;
+  margin-top: 5px;
+}
+
+
+.Profile form {
+    margin-left: 50px;
+    max-width: 400px;
+    height: 80vmin;
+    padding-top: 10px;
+    margin-top:-10px;
+   
+  }
+
+  .Profile-password {
+    margin-left: 50px;
+    max-width: 300px;
+    height: 10vmin;
+    padding-top: 5px;
+    color: #2d3e4e;
+    font-size: calc(2px + 1vmin);
+    
+  }
+  
+  .Profile-passwordCheck {
+    margin-left: 50px;
+    max-width: 300px;
+    height: 10vmin;
+    padding-top: 5px;
+    color: #2d3e4e;
+    font-size: calc(2px + 1vmin);
+   
+  }
+  .Image {
+    height: auto;
+    position: absolute;
+    right: 1%;
+    margin-bottom: 5%;
+  }
+  
+
+  
