@@ -62,7 +62,8 @@ export default function LoginForm() {
         </form>
       </Grid>
 
-      <Grid item xs={1} md={1} padding="5px"></Grid>
+      <Grid item xs={1} md={1} padding="5px">
+      </Grid>
 
       <Grid item xs={5} md={5} padding="5px">
         <Button
@@ -78,6 +79,7 @@ export default function LoginForm() {
       <Grid item xs={5} md={5}>
         <PasswordButton />
       </Grid>
+
       <Grid className="Alert" item xs={5} sm={5} md={9} lg={12}>
         <ErrorAlert
           setOpen={setOpenErrorMessage}
