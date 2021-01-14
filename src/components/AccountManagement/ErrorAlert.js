@@ -5,8 +5,11 @@ import IconButton from "@material-ui/core/IconButton";
 import Collapse from "@material-ui/core/Collapse";
 import Button from "@material-ui/core/Button";
 import CloseIcon from "@material-ui/icons/Close";
-
-const useStyles = makeStyles((theme) => ({
+/* Function that makes an error alert appear when a process is unsuccessful
+we use props (React property used to pass data from one component to the other) to pass the error message 
+to other functions.
+*/
+const useStyles = makeStyles((theme) => ({ //styling of the alert
   root: {
     right: 0,
     width: "100%",
@@ -34,10 +37,10 @@ export default function SimpleAlerts(props) {
               }}
             >
               <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
+            </IconButton> 
+          } // Error message that is obtained using props
         >
-          {props.Error}
+          {props.Error}  
         </Alert>
       </Collapse>
     </div>
