@@ -12,9 +12,12 @@ export default function Home() {
   return (
     <div className="Home">
       <Grid container spacing={2} padding="0px">
+        
         <Grid item xs={12} style={{ paddingTop: 0, paddingBottom: 0 }}>
           <header className="Home-MainTitle">
-            <h1>REACT 2</h1>
+            <h1>
+              REACT 2
+            </h1>
           </header>
         </Grid>
 
@@ -47,11 +50,14 @@ export default function Home() {
             <ListItem button>
               <ListItemText primary="Add new Round" />
             </ListItem>
+
           </List>
         </Grid>
+
         <Grid item xs={12} sm={5}>
           <ImageDynamic />
         </Grid>
+
       </Grid>
     </div>
   );

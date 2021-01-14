@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import { Grid } from "@material-ui/core";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
-import LoginForm from "../LoginComponents/LoginForm";
+import LoginForm from "./Components/LoginForm";
 
 /* Funtion to render the Login Page with the following components:
       - LoginForm
@@ -13,7 +13,9 @@ export default function Login() {
     <div className="Login">
       <Grid container spacing={5} padding="5px">
         <Grid item xs={12}>
-          <h1 className="MainTitle">Welcome to REACT 2</h1>
+          <h1 className="MainTitle">
+            Welcome to REACT 2
+          </h1>
         </Grid>
 
         <Grid item xs={12} md={6}>

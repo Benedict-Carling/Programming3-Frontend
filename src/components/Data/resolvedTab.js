@@ -6,9 +6,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import MainTable from "../../components/layout/CollapsibleTable";
-import GetTable from "../../components/Table/getTable";
-import ResolvedTable from "../../components/Table/resolvedTable";
+import GetTable from "./Table/getTable";
+import ResolvedTable from "./Table/resolvedTable";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,6 +65,7 @@ export default function SimpleTabs(props) {
           <Tab label="Resolved Discrepancies" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
+      
       <TabPanel value={value} index={0}>
         <GetTable
           setU_PASSCODE={props.setU_PASSCODE}
@@ -74,6 +74,7 @@ export default function SimpleTabs(props) {
           buttonclicked={props.buttonclicked}
         />
       </TabPanel>
+
       <TabPanel value={value} index={1}>
         <ResolvedTable
           setSelectedID={props.setSelectedID}
