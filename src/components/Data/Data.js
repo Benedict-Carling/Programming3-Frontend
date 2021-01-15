@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SimpleTabs from "./Components/resolvedTab";
-import EditTable from "../Table/EditTable";
+import EditTable from "./Table/EditTable";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 /* function that renders the data table as well as the test image an the expert comment and interpretation

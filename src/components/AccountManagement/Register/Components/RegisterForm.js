@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
 import { Grid } from "@material-ui/core";
-import { ApiEndpoint } from "../../../../index";
+import { ApiEndpoint } from "../../../../ApiEndpoint";
 /* Function that allows a new user to be registered.
 A post request is made to the backEnd and alerts to indicate if this was successful are also implemented.
 */

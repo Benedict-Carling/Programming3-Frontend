@@ -5,7 +5,7 @@ import SuccessAlert from "../../AccountManagement/Register/Components/SuccessAle
 import ErrorAlert from "../../AccountManagement/Register/Components/ErrorAlert";
 import UserContext from "../../../context/UserContext";
 import Axios from "axios";
-import { ApiEndpoint } from "../../../index";
+import { ApiEndpoint } from "../../../ApiEndpoint";
 
 /* This function allows the user to change their current passwords.
 It also implements alerts to indicate if the process was successful.

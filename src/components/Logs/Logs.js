@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { DataGrid } from "@material-ui/data-grid";
-import { ApiEndpoint } from "../../index";
+import { ApiEndpoint } from "../../ApiEndpoint";
 /* Function that fetches the data from the logs database in MongoDB using a get request to the backEnd
  and returns this data in a table
 */

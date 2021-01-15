@@ -4,8 +4,8 @@ import { DataGrid } from "@material-ui/data-grid";
 import Axios from "axios";
 import { Button } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
-import UserContext from "../../context/UserContext";
-import { ApiEndpoint } from "../../index";
+import UserContext from "../../../context/UserContext";
+import { ApiEndpoint } from "../../../ApiEndpoint";
 
 // Structure of the User's data
 const columns = [

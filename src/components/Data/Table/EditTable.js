@@ -3,14 +3,14 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import UserContext from "../../context/UserContext";
+import UserContext from "../../../context/UserContext";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { makeStyles } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
-import { ApiEndpoint } from "../../index";
+import { ApiEndpoint } from "../../../ApiEndpoint";
 
 /* Function to render the data of the unresolved discrepancies, which appear as a tab.
  */
