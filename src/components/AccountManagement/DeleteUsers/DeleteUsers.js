@@ -73,8 +73,6 @@ export default function DataTable() {
       accountIDToDelete: selectedArray.data.id,
     };
 
-  
-
     await Axios.post(ApiEndpoint + `users/delete`, UserDeleteId, config).then(
       (res) => {
         setRefreshTable((C) => !C);

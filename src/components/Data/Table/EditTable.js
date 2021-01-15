@@ -37,7 +37,6 @@ export default function EditTable(props) {
   // Function to check the data that is going to be added to main database and call function asynccommittodatabase
   function committodatabase() {
     props.setButtonclicked(false);
-  
 
     asynccommittodatabase();
   }
@@ -81,7 +80,6 @@ export default function EditTable(props) {
       InComment: props.expertComment,
       InInterpretation: props.expertInterpretation,
     };
-    
 
     const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
   };

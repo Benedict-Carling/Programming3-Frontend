@@ -36,12 +36,10 @@ export default function RegisterForm(props) {
   const submit = async (e) => {
     e.preventDefault();
     const newUser = { email, password, passwordCheck, userType }; // data needed for the new user
-   
 
     await Axios.post(ApiEndpoint + "users/register", newUser) // post request to the backEnd
 
       .then((response) => {
-       
         setOpenSuccessMessage(true); // if successful it enables the success alert
         setSuccessMessage("Registration has been successful!");
       })
