@@ -1,5 +1,5 @@
 import Grid from "@material-ui/core/Grid";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./profile.css";
 import PasswordChange from "./Components/PasswordChange";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
@@ -8,7 +8,7 @@ import UserContext from "../../context/UserContext";
 it includes the change password functionality from PasswordChange.js
 */
 export default function Profile() {
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
 
   return (
     <div className="Profile">

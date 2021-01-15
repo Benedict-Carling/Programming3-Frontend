@@ -1,6 +1,4 @@
-import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
-import UserContext from "../../../../context/UserContext";
+import React, { useState } from "react";
 import Axios from "axios";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
@@ -20,13 +18,10 @@ export default function RegisterForm(props) {
   const [password, setPassword] = useState("");
   const [passwordCheck, setPasswordCheck] = useState("");
   const [userType, setAccountType] = useState("");
-  const { setUserData } = useContext(UserContext);
   const [openSuccessMessage, setOpenSuccessMessage] = useState(false);
   const [openErrorMessage, setOpenErrorMessage] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState("");
   const [SuccessMessage, setSuccessMessage] = useState("");
-
-  const history = useHistory();
 
   const handleChange = (event) => {
     // sets the account type of the new user

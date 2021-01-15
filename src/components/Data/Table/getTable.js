@@ -8,8 +8,8 @@ import { ApiEndpoint } from "../../../ApiEndpoint";
  */
 export default function GetTable(props) {
   // Variables that change through the function process
-  const [responsive, setResponsive] = useState("standard");
-  const [tableBodyHeight, setTableBodyHeight] = useState("400px");
+  const [responsive] = useState("standard");
+  const [tableBodyHeight] = useState("400px");
   const [table, settable] = useState([]);
 
   // Styling function

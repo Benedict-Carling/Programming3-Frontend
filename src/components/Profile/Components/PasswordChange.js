@@ -19,7 +19,7 @@ export default function PasswordChange() {
   const [ErrorMessage, setErrorMessage] = useState("");
   const [SuccessMessage, setSuccessMessage] = useState("");
 
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
 
   const submit = async (e) => {
     e.preventDefault();
