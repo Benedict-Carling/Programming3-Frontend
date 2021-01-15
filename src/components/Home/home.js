@@ -42,11 +42,11 @@ export default function Home() {
             <Divider />
 
             <ListItem button divider>
-              <ListItemText primary="Round 2A" />
+              <ListItemText primary="Round 2A (not yet implemented)" />
             </ListItem>
 
             <ListItem button>
-              <ListItemText primary="Round 2B" />
+              <ListItemText primary="Round 2B (not yet implemented)" />
             </ListItem>
 
             <Divider light />
