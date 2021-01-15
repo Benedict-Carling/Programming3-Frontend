@@ -15,12 +15,14 @@
     "identity-obj-proxy": "^3.0.0",
     "mui-datatables": "^3.7.3",
     "node-fetch": "^2.6.1",
+    "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-zoom-pan-pinch": "^1.6.1",
     "regenerator-runtime": "^0.13.7",
+    "serve": "^11.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

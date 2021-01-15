@@ -18,9 +18,7 @@ export default function Home() {
       <Grid container spacing={2} padding="0px">
         <Grid item xs={12} style={{ paddingTop: 0, paddingBottom: 0 }}>
           <header className="Home-MainTitle">
-            <h1>
-              REACT 2
-            </h1>
+            <h1>REACT 2</h1>
           </header>
         </Grid>
 
@@ -32,10 +30,12 @@ export default function Home() {
 
         <Grid item xs={12} sm={6} style={{ marginLeft: 50 }}>
           <List component="nav" className="Home-Rounds">
-            <Link style={{ color: "inherit" }} to="/Data" // link to the data page
-            > 
+            <Link
+              style={{ color: "inherit" }}
+              to="/Data" // link to the data page
+            >
               <ListItem button>
-                <ListItemText primary="Round 1" /> 
+                <ListItemText primary="Round 1" />
               </ListItem>
             </Link>
 
@@ -56,7 +56,7 @@ export default function Home() {
             </ListItem>
           </List>
         </Grid>
-        
+
         <Grid item xs={12} sm={5}>
           <ImageDynamic />
         </Grid>

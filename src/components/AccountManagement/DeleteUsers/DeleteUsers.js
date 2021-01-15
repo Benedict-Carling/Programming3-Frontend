@@ -23,7 +23,7 @@ function selectedRow(row) {
   return { selectedArray };
 }
 
-// Function to hide unnecessary attributes of entry 
+// Function to hide unnecessary attributes of entry
 function process(entry) {
   return {
     id: entry._id,
@@ -32,10 +32,9 @@ function process(entry) {
   };
 }
 
-/* Function to render the Delete Users tab in the Account Management page 
-*/
+/* Function to render the Delete Users tab in the Account Management page
+ */
 export default function DataTable() {
-
   // Variables that may change throughout the function process
   const [state, setstate] = useState([]);
   const [refreshTable, setRefreshTable] = useState(false);

@@ -9,8 +9,8 @@ import UserContext from "../../context/UserContext";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-/* Function to render the navigation bar on the top of the website depending on the account type 
-*/
+/* Function to render the navigation bar on the top of the website depending on the account type
+ */
 
 // Styling function
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
 
 // Navigation function
 export default function NavBar() {
-
   // Styling propertities
   const classes = useStyles();
   const navStyle = {
@@ -47,7 +46,7 @@ export default function NavBar() {
   const { userData, setUserData } = useContext(UserContext);
   const history = useHistory();
 
-  // Function to log out 
+  // Function to log out
   const logout = () => {
     setUserData({
       token: undefined,
@@ -120,7 +119,6 @@ export default function NavBar() {
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
-
             </Toolbar>
           </AppBar>
         </div>
@@ -172,7 +170,6 @@ export default function NavBar() {
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
-
             </Toolbar>
           </AppBar>
         </div>
@@ -230,7 +227,6 @@ export default function NavBar() {
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
-              
             </Toolbar>
           </AppBar>
         </div>

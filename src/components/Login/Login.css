@@ -1,18 +1,18 @@
 /* CSS file for the Login page*/
 
 .Login {
-    background-color: #043c74;
-    height: 135vh;
-  }
-
-.Login form {
-  margin-left: 50px ;
-  max-width: 100px;
-  height: 30vmin;
-  text-align: left;     
+  background-color: #043c74;
+  height: 135vh;
 }
 
-.Login-picture{
+.Login form {
+  margin-left: 50px;
+  max-width: 100px;
+  height: 30vmin;
+  text-align: left;
+}
+
+.Login-picture {
   height: auto;
   position: absolute;
   right: 1%;
@@ -24,25 +24,25 @@
   flex-direction: row;
   align-items: left;
   justify-content: left;
-  font: 'oxygen';
+  font: "oxygen";
   font-size: calc(20px + 5vmin);
-  color:  #E8ECEB;
+  color: #e8eceb;
   margin-left: 50px;
 }
 
-.Label{
-  color:  #E8ECEB;
+.Label {
+  color: #e8eceb;
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.Textfield{
-  background-color: #E8ECEB;
+.Textfield {
+  background-color: #e8eceb;
   border: none;
   padding: 5px 5px;
   width: 300px;
-  color: #2D3E4E;
+  color: #2d3e4e;
   border-radius: 5px;
   margin-top: 5%;
   margin-bottom: 5%;
-} 
+}

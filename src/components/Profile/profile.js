@@ -19,9 +19,9 @@ export default function Profile() {
           </header>
         </Grid>
         <Grid item xs={12}>
-          <header className="Profile-Info" >
+          <header className="Profile-Info">
             {/*accesses the account information of current user*/}
-            <h1>EMAIL: {userData.user.email}</h1> 
+            <h1>EMAIL: {userData.user.email}</h1>
             <h1>ACCOUNT TYPE: {userData.user.type}</h1>
           </header>
         </Grid>

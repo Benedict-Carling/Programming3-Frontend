@@ -66,8 +66,7 @@ export default function LoginForm() {
         </form>
       </Grid>
 
-      <Grid item xs={1} md={1} padding="5px">
-      </Grid>
+      <Grid item xs={1} md={1} padding="5px"></Grid>
 
       <Grid item xs={5} md={5} padding="5px">
         <Button
