@@ -61,7 +61,7 @@ export default function EditTable(props) {
       InputValidation: props.expertInterpretation,
     };
     const resdb = await Axios.post(ApiEndpoint + "data/add-comment", jsonobj);
-    if (resdb.status === 200) props.setButtonclicked(true);
+   
     var date = new Date().getDate(); //Current Date
     var month = new Date().getMonth() + 1; //Current Month
     var year = new Date().getFullYear(); //Current
@@ -80,8 +80,8 @@ export default function EditTable(props) {
       InComment: props.expertComment,
       InInterpretation: props.expertInterpretation,
     };
-
-    await Axios.post(ApiEndpoint + "log/add-log", log);
+    const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
+    if ((resdb.status=== 200) && (reslog.status=== 200))props.setButtonclicked(true);
   };
 
   // Styling variables
