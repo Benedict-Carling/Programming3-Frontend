@@ -13,9 +13,8 @@ import grey from "@material-ui/core/colors/grey";
 import { ApiEndpoint } from "../../index";
 
 /* Function to render the data of the unresolved discrepancies, which appear as a tab.
-*/
+ */
 export default function EditTable(props) {
-
   // Function to create style
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -30,7 +29,7 @@ export default function EditTable(props) {
   }));
 
   const classes = useStyles();
-  
+
   // Variables that change through the function process EditTable
   const { userData, setUserData } = useContext(UserContext);
   const [open, setOpen] = React.useState(false);
@@ -160,7 +159,6 @@ export default function EditTable(props) {
           value={props.expertInterpretation}
           variant="outlined"
         >
-
           <MenuItem value={"Test: uR; Validity: -; IgG:-"}>
             Test: uR; Validity: -; IgG:-
           </MenuItem>
@@ -176,7 +174,6 @@ export default function EditTable(props) {
           <MenuItem value={"Test: R; Validity: V; IgG: P"}>
             Test: R; Validity: V; IgG: P
           </MenuItem>
-
         </Select>
       </FormControl>
 

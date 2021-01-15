@@ -5,9 +5,8 @@ import MUIDataTable from "mui-datatables";
 import { ApiEndpoint } from "../../..";
 
 /* Function to get the discrepancies data from the main databse
-*/
+ */
 export default function GetTable(props) {
-
   // Variables that change through the function process
   const [responsive, setResponsive] = useState("standard");
   const [tableBodyHeight, setTableBodyHeight] = useState("400px");
@@ -177,11 +176,7 @@ export default function GetTable(props) {
 
   return (
     <MuiThemeProvider theme={customTheme()}>
-      <MUIDataTable
-        data={table}
-        columns={columns}
-        options={options}
-      />
+      <MUIDataTable data={table} columns={columns} options={options} />
     </MuiThemeProvider>
   );
 }

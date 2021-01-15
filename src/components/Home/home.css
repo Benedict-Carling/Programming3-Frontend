@@ -1,36 +1,33 @@
 /* CSS file for the home page*/
-.Home{
-  background-color:  #B5D4E1;
+.Home {
+  background-color: #b5d4e1;
   height: 135vh;
 }
 
-.Home-MainTitle{
+.Home-MainTitle {
   height: 14vmin;
   font-size: calc(10px + 5vmin);
-  color: #2D3E4E;
+  color: #2d3e4e;
   margin-left: 50px;
-  
+
   margin-top: -50px;
-  
 }
 
-.Home-header{
+.Home-header {
   align-items: left;
   justify-content: left;
   font-size: calc(10px + 2vmin);
-  color: #2D3E4E;
+  color: #2d3e4e;
   margin-left: 50px;
   margin-bottom: 5px;
   max-width: 500px;
   height: 8vmin;
 }
 
-
-
-.Home-Rounds{
-  width: '100%';
-  max-Width: 360px;
-  background-Color:  #c5dfe6;
+.Home-Rounds {
+  width: "100%";
+  max-width: 360px;
+  background-color: #c5dfe6;
   margin-left: 50px;
   margin-right: 2px;
 }

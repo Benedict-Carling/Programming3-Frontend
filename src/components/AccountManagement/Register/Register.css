@@ -1,7 +1,7 @@
 /* CSS file for the registration page*/
 
 .Register {
-  background-color: #B5D4E1;
+  background-color: #b5d4e1;
   margin-top: 8px;
   height: 146vh;
 }
@@ -37,7 +37,7 @@
 }
 
 .Textfield {
-  background-color: #B5D4E1;
+  background-color: #b5d4e1;
   border: 2px solid #2d3e4e;
   padding: 5px 5px;
   width: 500px;
@@ -84,8 +84,7 @@
   margin-bottom: 5%;
 }
 
-.Alert{
-  
+.Alert {
   float: right;
   text-align: right;
 }

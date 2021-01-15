@@ -10,7 +10,7 @@ import GetTable from "../Table/getTable";
 import ResolvedTable from "../../components/Table/resolvedTable";
 
 /* Function to render the tab panel of the unresolved and resolved discrepancies
-*/
+ */
 
 // Function to create a tab panel
 function TabPanel(props) {
@@ -79,7 +79,7 @@ export default function SimpleTabs(props) {
           buttonclicked={props.buttonclicked}
         />
       </TabPanel>
-      
+
       <TabPanel value={value} index={1}>
         <ResolvedTable
           setSelectedID={props.setSelectedID}

@@ -5,9 +5,8 @@ import MUIDataTable from "mui-datatables";
 import { ApiEndpoint } from "../..";
 
 /* Function to render the resolved discrepancies table content
-*/
+ */
 export default function ResolvedTable(props) {
-
   // Variables that may change through the function process
   const [responsive, setResponsive] = useState("standard");
   const [tableBodyHeight, setTableBodyHeight] = useState("400px");
@@ -51,7 +50,7 @@ export default function ResolvedTable(props) {
       },
     });
 
-  // Structuring the columns 
+  // Structuring the columns
   const columns = [
     {
       name: "id",
@@ -119,7 +118,7 @@ export default function ResolvedTable(props) {
     },
   ];
 
-   // Function to assign the attibutes of row to different variable
+  // Function to assign the attibutes of row to different variable
   function selectedRow(row) {
     props.setSelectedID(row[0]);
     props.setU_PASSCODE(row[2]);
@@ -177,11 +176,7 @@ export default function ResolvedTable(props) {
 
   return (
     <MuiThemeProvider theme={customTheme()}>
-      <MUIDataTable
-        data={table}
-        columns={columns}
-        options={options}
-      />
+      <MUIDataTable data={table} columns={columns} options={options} />
     </MuiThemeProvider>
   );
 }

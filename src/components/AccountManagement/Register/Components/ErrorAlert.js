@@ -9,7 +9,8 @@ import CloseIcon from "@material-ui/icons/Close";
 we use props (React property used to pass data from one component to the other) to pass the error message 
 to other functions.
 */
-const useStyles = makeStyles((theme) => ({ //styling of the alert
+const useStyles = makeStyles((theme) => ({
+  //styling of the alert
   root: {
     right: 0,
     width: "100%",
@@ -37,10 +38,10 @@ export default function SimpleAlerts(props) {
               }}
             >
               <CloseIcon fontSize="inherit" />
-            </IconButton> 
+            </IconButton>
           } // Error message that is obtained using props
         >
-          {props.Error}  
+          {props.Error}
         </Alert>
       </Collapse>
     </div>

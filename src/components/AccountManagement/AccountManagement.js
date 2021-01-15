@@ -31,14 +31,17 @@ function TabPanel(props) {
 export default function AccountManagement(props) {
   const [selectedTab, setSelectedTab] = React.useState(0);
 
-  const handleChange = (event, newValue) => { // registers the tab that is selected
+  const handleChange = (event, newValue) => {
+    // registers the tab that is selected
     setSelectedTab(newValue);
   };
 
   return (
     <div>
       <AppBar position="static" color="primary">
-        <Tabs value={selectedTab} onChange={handleChange} // changes the selected tab value
+        <Tabs
+          value={selectedTab}
+          onChange={handleChange} // changes the selected tab value
         >
           <Tab label="Register New Account"></Tab>
 

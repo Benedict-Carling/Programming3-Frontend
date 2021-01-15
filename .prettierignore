@@ -1,0 +1,8 @@
+# Files for prettier code formatting to ignore
+
+build
+.firebase
+.github
+node_modules
+.firebaserc
+.gitignore
