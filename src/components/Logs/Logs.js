@@ -32,7 +32,6 @@ export default function Logs() {
     const fetchData = async () => {
       const result = await Axios.get(ApiEndpoint + `log/table`); // get request to the backEnd
       var body = result.data.map(process);
-      console.log(body);
       settable(body);
     };
     fetchData(); // fetches the data

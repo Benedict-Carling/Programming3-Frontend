@@ -20,10 +20,6 @@ let selectedArray = [];
 // Function to confirm the selected row
 function selectedRow(row) {
   selectedArray = row;
-  console.log(row);
-  console.log(row.data.id);
-  console.log(row.data.email);
-  console.log(selectedArray);
   return { selectedArray };
 }
 
@@ -49,9 +45,7 @@ export default function DataTable() {
 
   // Function to obtain the length of selectedChang
   function selectedRowChange(selectedChange) {
-    console.log(selectedChange);
     setNumSelected(selectedChange.rowIds.length);
-    console.log(numSelected);
   }
 
   // Function to get the data from the Users database
@@ -80,14 +74,10 @@ export default function DataTable() {
       accountIDToDelete: selectedArray.data.id,
     };
 
-    console.log(selectedArray.data.id);
-
-    console.log(UserDeleteId);
+  
 
     await Axios.post(ApiEndpoint + `users/delete`, UserDeleteId, config).then(
       (res) => {
-        console.log(res);
-        console.log(res.data);
         setRefreshTable((C) => !C);
       }
     );

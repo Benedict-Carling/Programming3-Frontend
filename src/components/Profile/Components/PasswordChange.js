@@ -36,7 +36,6 @@ export default function PasswordChange() {
     )
       .then((response) => {
         // if successful prints success alert
-        console.log(response);
         setOpenSuccessMessage(true);
         setSuccessMessage("The password has been changed successfully!");
         setPasswordCheck("");
