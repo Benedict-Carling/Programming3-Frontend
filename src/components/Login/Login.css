@@ -2,7 +2,7 @@
 
 .Login {
   background-color: #043c74;
-  height: 135vh;
+  min-height: 100vh;
 }
 
 .Login form {
