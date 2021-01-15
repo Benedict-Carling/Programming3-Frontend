@@ -38,13 +38,13 @@ Git clone the project from: https://github.com/Benedict-Carling/Programming3-Fro
 or by using the terminal:
 
 ```bash
-git clone https://github.com/Benedict-Carling/Programming3-Frontend.git
+$ git clone https://github.com/Benedict-Carling/Programming3-Frontend.git
 ```
 
 Use terminal inside root of the project to type:
 
 ```bash
-npm install
+$ npm install
 ```
 
 ## Usage
@@ -52,5 +52,5 @@ npm install
 To host locally, use terminal inside root of the project to type:
 
 ```bash
-npm start
+$ npm start
 ```
