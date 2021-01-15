@@ -40,7 +40,7 @@ export default function DataTable() {
   const [refreshTable, setRefreshTable] = useState(false);
   const [numSelected, setNumSelected] = useState(0);
   const [errMes, setErrMes] = useState("");
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
 
   // Function to obtain the length of selectedChang
   function selectedRowChange(selectedChange) {

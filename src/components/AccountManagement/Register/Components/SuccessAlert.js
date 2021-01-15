@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Alert from "@material-ui/lab/Alert";
 import IconButton from "@material-ui/core/IconButton";
 import Collapse from "@material-ui/core/Collapse";
-import Button from "@material-ui/core/Button";
 import CloseIcon from "@material-ui/icons/Close";
 /* Function that makes a success alert appear when a process is successful
 we use props (React property used to pass data from one component to the other) to pass the success message 
