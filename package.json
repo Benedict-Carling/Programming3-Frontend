@@ -21,6 +21,7 @@
     "react-scripts": "4.0.1",
     "react-zoom-pan-pinch": "^1.6.1",
     "regenerator-runtime": "^0.13.7",
+    "serve": "^11.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
