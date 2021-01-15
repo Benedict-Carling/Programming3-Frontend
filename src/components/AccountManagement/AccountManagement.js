@@ -1,6 +1,6 @@
 import React from "react";
 import Register from "./Register/Register";
-import DeleteUsers from "../AccountManagement/DeleteUsers";
+import DeleteUsers from "./DeleteUsers/DeleteUsers";
 import { Tabs, Tab, AppBar } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";

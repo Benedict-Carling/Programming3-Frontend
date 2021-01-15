@@ -7,7 +7,7 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import GetTable from "../Table/getTable";
-import ResolvedTable from "../../components/Table/resolvedTable";
+import ResolvedTable from "../Table/resolvedTable";
 
 /* Function to render the tab panel of the unresolved and resolved discrepancies
  */

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
-import { ApiEndpoint } from "../..";
+import { ApiEndpoint } from "../../..";
 
 /* Function to render the resolved discrepancies table content
  */

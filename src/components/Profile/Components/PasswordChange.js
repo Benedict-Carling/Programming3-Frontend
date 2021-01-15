@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "../pages/profile.css";
+import "../profile.css";
 import Button from "@material-ui/core/Button";
 import SuccessAlert from "../../AccountManagement/Register/Components/SuccessAlert";
 import ErrorAlert from "../../AccountManagement/Register/Components/ErrorAlert";
