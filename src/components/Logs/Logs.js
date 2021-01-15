@@ -8,10 +8,10 @@ import { ApiEndpoint } from "../../ApiEndpoint";
 export default function Logs() {
   const columns = [
     // all the fields contained in the table rendered
-    { field: "Email", headerName: "Email", width: 100 },
+    { field: "Email", headerName: "Email", width: 300 },
     { field: "U_PASSCODE", headerName: "U_PASSCODE", width: 200 },
     { field: "accountType", headerName: "Account Type", width: 150 },
-    { field: "LogDate", headerName: "Date and Time", width: 400 },
+    { field: "LogDate", headerName: "Date and Time", width: 200 },
     { field: "id", headerName: "Test ID", width: 200 },
     {
       field: "ExpertInterpretation",
