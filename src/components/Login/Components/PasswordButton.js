@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ForgotPassword from "./ForgotPassword";
 
+/* Function to render the Forgot Password button and its functionalities 
+that have been specified in the ForgotPassword function
+*/
 export default function PasswordButton() {
   const [open, setOpen] = React.useState(false);
 

@@ -7,6 +7,8 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Emailsender from "./Emailsender";
 
+/* Function to render components after clicking the Forgot Password button in the Login page.
+*/
 export default function ForgotPassword(props) {
   return (
     <div>

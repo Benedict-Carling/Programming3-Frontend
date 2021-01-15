@@ -4,6 +4,10 @@ import { Grid } from "@material-ui/core";
 import ImageDynamic from "../CovidStatsImg/ImageDynamic";
 import LoginForm from "./Components/LoginForm";
 
+/* Funtion to render the Login Page with the following components:
+      - LoginForm
+      - ImageDynamic
+*/
 export default function Login() {
   return (
     <div className="Login">

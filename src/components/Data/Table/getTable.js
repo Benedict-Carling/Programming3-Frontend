@@ -4,10 +4,16 @@ import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
 import { ApiEndpoint } from "../../..";
 
+/* Function to get the discrepancies data from the main databse
+*/
 export default function GetTable(props) {
+
+  // Variables that change through the function process
   const [responsive, setResponsive] = useState("standard");
   const [tableBodyHeight, setTableBodyHeight] = useState("400px");
+  const [table, settable] = useState([]);
 
+  // Styling function
   const customTheme = () =>
     createMuiTheme({
       overrides: {
@@ -45,6 +51,7 @@ export default function GetTable(props) {
       },
     });
 
+  // Creating the column structure
   const columns = [
     {
       name: "id",
@@ -112,14 +119,14 @@ export default function GetTable(props) {
     },
   ];
 
-  const [table, settable] = useState([]);
-
+  // Function to assign the attibutes of row to different variables
   function selectedRow(row) {
     props.setSelectedID(row[0]);
     props.setU_PASSCODE(row[2]);
     props.setFlag(row[3]);
   }
 
+  // List of properties
   const options = {
     filter: true,
     filterType: "dropdown",
@@ -136,6 +143,7 @@ export default function GetTable(props) {
     },
   };
 
+  // Function to process the data obtain from the get request
   function process(entry) {
     return {
       U_PASSCODE: entry.U_PASSCODE,
@@ -149,6 +157,8 @@ export default function GetTable(props) {
       ImagePath: entry.ImagePath,
     };
   }
+
+  // Get request function to obtain the list of discrepancies of the main database
   useEffect(() => {
     const fetchData = async () => {
       const result = await Axios.get(ApiEndpoint + `data/table`);
@@ -163,13 +173,11 @@ export default function GetTable(props) {
       settable(body);
     };
     fetchData();
-    //table.forEach(element => {element.id = Number.parseInt(element.id)});
   }, [props.buttonclicked]);
 
   return (
     <MuiThemeProvider theme={customTheme()}>
       <MUIDataTable
-        //title={"Unresolved Discrepancies"}
         data={table}
         columns={columns}
         options={options}

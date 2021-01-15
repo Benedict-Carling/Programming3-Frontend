@@ -8,9 +8,10 @@ import Data from "./components/Data/Data";
 import Login from "./components/Login/Login";
 import Logs from "./components/Logs/Logs";
 import profile from "./components/Profile/profile";
-
 import "./style.css";
 
+/* Function to render all the components of the website 
+*/
 export default function App() {
   const [userData, setUserData] = useState({
     token: undefined,

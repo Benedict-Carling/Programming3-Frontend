@@ -12,7 +12,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
 import { ApiEndpoint } from "../../index";
 
+/* Function to render the data of the unresolved discrepancies, which appear as a tab.
+*/
 export default function EditTable(props) {
+
+  // Function to create style
   const useStyles = makeStyles((theme) => ({
     button: {
       display: "block",
@@ -24,8 +28,14 @@ export default function EditTable(props) {
       paddingLeft: -50,
     },
   }));
+
+  const classes = useStyles();
+  
+  // Variables that change through the function process EditTable
   const { userData, setUserData } = useContext(UserContext);
   const [open, setOpen] = React.useState(false);
+
+  // Function to check the data that is going to be added to main database and call function asynccommittodatabase
   function committodatabase() {
     props.setButtonclicked(false);
     console.log(props.selectedID);
@@ -34,7 +44,7 @@ export default function EditTable(props) {
 
     asynccommittodatabase();
   }
-  const classes = useStyles();
+
   const handleChange = (e) => {
     props.setExpertInterpretation(e.target.value);
   };
@@ -47,6 +57,7 @@ export default function EditTable(props) {
     setOpen(true);
   };
 
+  // Function to update the selected data of the main database and to create an entry in the logs database
   const asynccommittodatabase = async (e) => {
     const jsonobj = {
       InputId: props.selectedID,
@@ -79,8 +90,8 @@ export default function EditTable(props) {
     const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
   };
 
+  // Styling variables
   const darkergrey = grey[500];
-
   const useLabelStyles = makeStyles({
     root: {
       backgroundColor: darkergrey,
@@ -92,15 +103,15 @@ export default function EditTable(props) {
       },
     },
   });
+  const labelClasses = useLabelStyles();
 
+  // Function to display an image of the discrepancy (currently up to ID 17 as it is the number of images that we have been given)
   function getimgpath() {
     if (props.selectedID > 17) return "17";
     if (!props.selectedID) return "NoImage";
     if (props.selectedFlag === "Corrupt") return "CorruptedImage";
     else return props.selectedID;
   }
-
-  const labelClasses = useLabelStyles();
 
   return (
     <div>
@@ -113,6 +124,7 @@ export default function EditTable(props) {
           />
         </TransformComponent>
       </TransformWrapper>
+
       <TextField
         id="idofclicked"
         label="ID"
@@ -121,6 +133,7 @@ export default function EditTable(props) {
         value={props.selectedID}
         InputProps={{ classes: labelClasses }}
       />
+
       <TextField
         onChange={(e) => props.setExpertComment(e.target.value)}
         value={props.expertComment}
@@ -136,6 +149,7 @@ export default function EditTable(props) {
         <InputLabel id="demo-controlled-open-select-label">
           Expert interpretation
         </InputLabel>
+
         <Select
           labelId="Expert Interpretation"
           id="userinter"
@@ -146,18 +160,23 @@ export default function EditTable(props) {
           value={props.expertInterpretation}
           variant="outlined"
         >
+
           <MenuItem value={"Test: uR; Validity: -; IgG:-"}>
             Test: uR; Validity: -; IgG:-
           </MenuItem>
+
           <MenuItem value={"Test: R; Validity: I; IgG:-"}>
             Test: R; Validity: I; IgG:-
           </MenuItem>
+
           <MenuItem value={"Test: R; Validity: V; IgG: N"}>
             Test: R; Validity: V; IgG: N
           </MenuItem>
+
           <MenuItem value={"Test: R; Validity: V; IgG: P"}>
             Test: R; Validity: V; IgG: P
           </MenuItem>
+
         </Select>
       </FormControl>
 

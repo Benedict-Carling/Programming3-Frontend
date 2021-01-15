@@ -7,10 +7,12 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import UserContext from "../../context/UserContext";
 import { useHistory } from "react-router-dom";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-
 import { Link } from "react-router-dom";
 
+/* Function to render the navigation bar on the top of the website depending on the account type 
+*/
+
+// Styling function
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -31,16 +33,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Navigation function
 export default function NavBar() {
-  const classes = useStyles();
-  const { userData, setUserData } = useContext(UserContext);
-  const history = useHistory();
 
+  // Styling propertities
+  const classes = useStyles();
   const navStyle = {
     color: "white",
     textDecoration: "none",
   };
 
+  // Variables that vary through the function process
+  const { userData, setUserData } = useContext(UserContext);
+  const history = useHistory();
+
+  // Function to log out 
   const logout = () => {
     setUserData({
       token: undefined,
@@ -49,6 +56,7 @@ export default function NavBar() {
     history.push("/");
   };
 
+  // Depending on the user account (webmaster, editor, reviewer) the navigation bar would display different options correpsponing to each users functionalities
   try {
     if (userData.user.type === "webmaster")
       return (
@@ -68,6 +76,7 @@ export default function NavBar() {
                   />
                 </IconButton>
               </Link>
+
               <Link style={navStyle} to="/data">
                 <Button>
                   <Typography className={classes.navbartext}>
@@ -75,14 +84,17 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+
               <Typography className={classes.title}>
                 Account Type: {userData.user.type}
               </Typography>
+
               <Link style={navStyle} to="/home">
                 <Button>
                   <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/accountmanagement">
                 <Button>
                   <Typography className={classes.navbartext}>
@@ -90,11 +102,13 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/logs">
                 <Button>
                   <Typography className={classes.navbartext}>Logs</Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/profile">
                 <Button>
                   <Typography className={classes.navbartext}>
@@ -102,9 +116,11 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
+
             </Toolbar>
           </AppBar>
         </div>
@@ -128,17 +144,21 @@ export default function NavBar() {
                   />
                 </IconButton>
               </Link>
+
               <Typography variant="h6" className={classes.title}>
                 Review discrepancies
               </Typography>
+
               <Typography variant="h6" className={classes.title}>
                 Account Type: {userData.user.type}
               </Typography>
+
               <Link style={navStyle} to="/">
                 <Button>
                   <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/profile">
                 {" "}
                 {/* icon that takes the user to their profile page */}
@@ -148,9 +168,11 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
+
             </Toolbar>
           </AppBar>
         </div>
@@ -174,22 +196,27 @@ export default function NavBar() {
                   />
                 </IconButton>
               </Link>
+
               <Typography variant="h6" className={classes.title}>
                 Review discrepancies
               </Typography>
+
               <Typography variant="h6" className={classes.title}>
                 Account Type: {userData.user.type}
               </Typography>
+
               <Link style={navStyle} to="/">
                 <Button>
                   <Typography className={classes.navbartext}>Home</Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/logs">
                 <Button>
                   <Typography className={classes.navbartext}>Logs</Typography>
                 </Button>
               </Link>
+
               <Link style={navStyle} to="/profile">
                 {" "}
                 {/* icon that takes the user to their profile page */}
@@ -199,9 +226,11 @@ export default function NavBar() {
                   </Typography>
                 </Button>
               </Link>
+
               <Button onClick={logout}>
                 <Typography className={classes.navbartext}>Logout</Typography>
               </Button>
+              
             </Toolbar>
           </AppBar>
         </div>

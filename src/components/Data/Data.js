@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SimpleTabs from "./resolvedTab";
+import SimpleTabs from "./Components/resolvedTab";
 import EditTable from "../Table/EditTable";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -31,6 +31,7 @@ export default function Data() {
           />
         </Card>
       </Grid>
+
       <Grid item xs={12} sm={3}>
         <Card type="outlined"></Card>
         <EditTable // values that are passed in between the table when a row is selected
