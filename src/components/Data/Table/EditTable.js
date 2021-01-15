@@ -37,9 +37,7 @@ export default function EditTable(props) {
   // Function to check the data that is going to be added to main database and call function asynccommittodatabase
   function committodatabase() {
     props.setButtonclicked(false);
-    console.log(props.selectedID);
-    console.log(props.expertComment);
-    console.log(props.expertInterpretation);
+  
 
     asynccommittodatabase();
   }
@@ -65,7 +63,6 @@ export default function EditTable(props) {
     };
     const resdb = await Axios.post(ApiEndpoint + "data/add-comment", jsonobj);
     if (resdb.status === 200) props.setButtonclicked(true);
-    console.log("response", resdb);
     var date = new Date().getDate(); //Current Date
     var month = new Date().getMonth() + 1; //Current Month
     var year = new Date().getFullYear(); //Current
@@ -84,7 +81,7 @@ export default function EditTable(props) {
       InComment: props.expertComment,
       InInterpretation: props.expertInterpretation,
     };
-    console.log(log);
+    
 
     const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
   };
