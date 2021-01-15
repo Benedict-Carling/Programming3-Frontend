@@ -6,7 +6,7 @@ import ForgotPassword from "./ForgotPassword";
 that have been specified in the ForgotPassword function
 */
 export default function PasswordButton() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);

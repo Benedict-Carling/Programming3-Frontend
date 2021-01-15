@@ -31,7 +31,7 @@ export default function EditTable(props) {
   const classes = useStyles();
 
   // Variables that change through the function process EditTable
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
   const [open, setOpen] = React.useState(false);
 
   // Function to check the data that is going to be added to main database and call function asynccommittodatabase
@@ -81,7 +81,7 @@ export default function EditTable(props) {
       InInterpretation: props.expertInterpretation,
     };
 
-    const reslog = await Axios.post(ApiEndpoint + "log/add-log", log);
+    await Axios.post(ApiEndpoint + "log/add-log", log);
   };
 
   // Styling variables
