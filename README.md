@@ -16,7 +16,7 @@ The workflow initiator file can be seen within the `.github/workflows/` folder a
 
 ## Code Formatting
 
-Our repo uses prettier code formatting, and enforces pull requests and commits pass prettier code formatting checks, the current code formatting status on the main branch is
+Our repo uses prettier (https://prettier.io) code formatting, and enforces pull requests and commits pass prettier code formatting checks, the current code formatting status on the main branch is
 
 ![CodeFormatting](https://github.com/Benedict-Carling/Programming3-Frontend/workflows/CodeFormatting/badge.svg)
 
