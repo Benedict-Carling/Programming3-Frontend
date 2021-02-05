@@ -27,8 +27,8 @@ export default function EditTable(props) {
       minWidth: 285,
     },
     mytextinputs: {
-      paddingTop: '10px',
-    }
+      paddingTop: "10px",
+    },
   }));
 
   const classes = useStyles();

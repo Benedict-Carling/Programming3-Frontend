@@ -136,7 +136,7 @@ export default function GetTable(props) {
     download: false,
     print: false,
     rowsPerPageOptions: [5, 10, 15],
-    onRowSelectionChange: (currentrowselcted,allrowselected,rowsselceted) => {
+    onRowSelectionChange: (currentrowselcted, allrowselected, rowsselceted) => {
       selectedRow(table[rowsselceted]);
     },
   };
