@@ -22,9 +22,12 @@ export default function EditTable(props) {
       marginTop: theme.spacing(2),
     },
     formControl: {
-      margin: theme.spacing(1),
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
       minWidth: 285,
-      paddingLeft: -50,
+    },
+    mytextinputs: {
+      paddingTop: "10px",
     },
   }));
 
@@ -109,7 +112,7 @@ export default function EditTable(props) {
   }
 
   return (
-    <div>
+    <div classname={classes.features}>
       <TransformWrapper>
         <TransformComponent>
           <img
@@ -120,25 +123,30 @@ export default function EditTable(props) {
         </TransformComponent>
       </TransformWrapper>
 
-      <TextField
-        id="idofclicked"
-        label="ID"
-        variant="outlined"
-        fullWidth="20ch"
-        value={props.selectedID}
-        InputProps={{ classes: labelClasses }}
-      />
+      <div className={classes.mytextinputs}>
+        <TextField
+          id="idofclicked"
+          label="ID"
+          variant="outlined"
+          fullWidth="20ch"
+          margingTop="5px"
+          value={props.selectedID}
+          InputProps={{ classes: labelClasses }}
+        />
+      </div>
 
-      <TextField
-        onChange={(e) => props.setExpertComment(e.target.value)}
-        value={props.expertComment}
-        id="usercomment"
-        label="Expert Comment"
-        multiline
-        rows={6}
-        fullWidth="20ch"
-        variant="outlined"
-      />
+      <div className={classes.mytextinputs}>
+        <TextField
+          onChange={(e) => props.setExpertComment(e.target.value)}
+          value={props.expertComment}
+          id="usercomment"
+          label="Expert Comment"
+          multiline
+          rows={6}
+          fullWidth="20ch"
+          variant="outlined"
+        />
+      </div>
 
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-controlled-open-select-label">

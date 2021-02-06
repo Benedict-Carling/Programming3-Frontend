@@ -120,9 +120,9 @@ export default function GetTable(props) {
 
   // Function to assign the attibutes of row to different variables
   function selectedRow(row) {
-    props.setSelectedID(row[0]);
-    props.setU_PASSCODE(row[2]);
-    props.setFlag(row[3]);
+    props.setSelectedID(row.id);
+    props.setU_PASSCODE(row.U_PASSCODE);
+    props.setFlag(row.Flag);
   }
 
   // List of properties
@@ -132,13 +132,12 @@ export default function GetTable(props) {
     responsive,
     tableBodyHeight,
     selectableRowsHeader: false,
-    selectableRowsHideCheckboxes: true,
-    selectableRows: false,
+    selectableRows: "single",
     download: false,
     print: false,
     rowsPerPageOptions: [5, 10, 15],
-    onRowClick: (row, index) => {
-      selectedRow(row);
+    onRowSelectionChange: (currentrowselcted, allrowselected, rowsselceted) => {
+      selectedRow(table[rowsselceted]);
     },
   };
 
